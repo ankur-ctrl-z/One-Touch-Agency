@@ -1,9 +1,9 @@
-Repository Description:
-Project Name: SiteForge - Event Management Website
-Description:
+# Repository Description:
+## Project Name: SiteForge - Event Management Website
+## Description:
 Welcome to the repository for the SiteForge website! This project aims to create a professional and dynamic website for One Touch Agency, specializing in event management services. The website will serve as a platform to showcase One Touch Agency's expertise in organizing various events and managing event logistics effectively. It is built using the MERN (MongoDB, Express.js, React.js, Node.js) stack.
 
-Key Features:
+## Key Features:
 . Modern and responsive design tailored for event management industry
 
 . Comprehensive information about One Touch Agency's event services, including event planning, coordination, and execution
@@ -14,7 +14,7 @@ Key Features:
 
 . Social media integration for sharing and promotion
 
-Technologies Used:
+## Technologies Used:
 1: MongoDB for database storage
 
 2: Express.js for backend development
@@ -29,5 +29,5 @@ Technologies Used:
 
 7: Continuous integration and deployment using Hostinger, with NGINX server for serving the React app
 
-License:
+## License:
 This project is private and not publicly available.
