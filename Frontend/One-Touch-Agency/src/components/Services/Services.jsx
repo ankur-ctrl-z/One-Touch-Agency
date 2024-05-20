@@ -1,39 +1,27 @@
 const Services = () => {
   return (
-    <section className="text-gray-400 body-font bg-gray-900">
-      <div className="container px-5 py-24 mx-auto">
+    <div className="text-gray-400 body-font bg-gray-900">
+      <div className="container px-5 py-24 mx-auto pt-15">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
           <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white">
             Our Services
           </h1>
-          <p className="lg:w-1/2 w-full leading-relaxed text-opacity-80 text-2xl pt-2">
-            Tailoring Strategies to Ignite Action for Your Brand
-          </p>
         </div>
         <div className="flex flex-wrap -m-4">
-
-          {/* Stall Fabrication */}
-          <a href="" className="xl:w-1/3 md:w-1/2 p-4" style={{backgroundImage:''}}>
-            <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
-              <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <h2 className="text-xl text-white font-medium title-font mb-2">Stall Fabrication</h2>
+          {/* Tailoring Strategies */}
+          <div className="xl:w-1/3 md:w-1/2 p-4">
+            <div className="h-56 flex flex-col justify-center items-center">
+              <p className="leading-relaxed text-opacity-80 text-4xl pt-4 text-center font-bold">
+                Tailoring Strategies <br /> to Ignite Action for <br /> Your Brand
+              </p>
+              <button className="flex mx-auto mt-8 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
+                  View All
+              </button>
             </div>
-          </a>
+          </div>
 
-          {/* Mice */}
-          <a href="" className="xl:w-1/3 md:w-1/2 p-4" style={{backgroundImage:''}}>
+          {/* MICE */}
+          <a href="" className="xl:w-1/3 md:w-1/2 p-4">
             <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
@@ -55,7 +43,7 @@ const Services = () => {
           </a>
 
           {/* Awards Event */}
-          <a href="" className="xl:w-1/3 md:w-1/2 p-4" style={{backgroundImage:''}}>
+          <a href="" className="xl:w-1/3 md:w-1/2 p-4">
             <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
@@ -76,7 +64,7 @@ const Services = () => {
           </a>
 
           {/* Theme Party */}
-          <a href="" className="xl:w-1/3 md:w-1/2 p-4" style={{backgroundImage:''}}>
+          <a href="" className="xl:w-1/3 md:w-1/2 p-4">
             <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
@@ -96,7 +84,7 @@ const Services = () => {
           </a>
 
           {/* Corporate Events */}
-          <a href="" className="xl:w-1/3 md:w-1/2 p-4" style={{backgroundImage:''}}>
+          <a href="" className="xl:w-1/3 md:w-1/2 p-4">
             <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
@@ -115,8 +103,8 @@ const Services = () => {
             </div>
           </a>
 
-          {/* Ramona Falls */}
-          <a href="" className="xl:w-1/3 md:w-1/2 p-4" style={{backgroundImage:''}}>
+          {/* Stall Fabrication */}
+          <a href="" className="xl:w-1/3 md:w-1/2 p-4">
             <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
@@ -128,19 +116,17 @@ const Services = () => {
                   className="w-6 h-6"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
               </div>
-              <h2 className="text-xl text-white font-medium title-font mb-2">Ramona Falls</h2>
+              <h2 className="text-xl text-white font-medium title-font mb-2">Stall Fabrication</h2>
             </div>
           </a>
         </div>
-        <button className="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
-          View All
-        </button>
       </div>
-    </section>
+    </div>
   );
 };
 
 export default Services;
+

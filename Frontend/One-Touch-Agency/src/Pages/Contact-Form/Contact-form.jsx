@@ -1,6 +1,10 @@
 const ContactForm = () => {
   return (
-    <section className="text-gray-600 body-font relative bg-gray-900">
+    <div className="text-gray-600 body-font relative">
+      <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white flex justify-center pt-12">
+        <p>Need A Service</p>
+        Get In Touch
+      </h1>
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
@@ -28,9 +32,9 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 rounded-lg">
-          <h1 className="text-gray-900 text-2xl mb-2 font-bold title-font pl-3">GET IN TOUCH</h1>
-          <div className="relative mb-4 pl-5 pr-5">
+        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          <h1 className="text-gray-900 text-2xl mb-2 font-bold title-font">GET IN TOUCH</h1>
+          <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-lg text-gray-600">Email</label>
             <input
               type="email"
@@ -39,7 +43,7 @@ const ContactForm = () => {
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
-          <div className="relative mb-4 pl-5 pr-5">
+          <div className="relative mb-4">
             <label htmlFor="services" className="leading-7 text-lg text-gray-600">Services</label>
             <input
               type="text"
@@ -48,7 +52,7 @@ const ContactForm = () => {
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
-          <div className="relative mb-4 pl-5 pr-5">
+          <div className="relative mb-4">
             <label htmlFor="message" className="leading-7 text-lg text-gray-600">Messages</label>
             <textarea
               id="message"
@@ -56,16 +60,11 @@ const ContactForm = () => {
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
-          <button className="text-white bg-indigo-500 border-0 pl-5 pr-5 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+          <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 export default ContactForm;
-
-
-
-
-
