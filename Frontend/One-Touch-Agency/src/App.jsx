@@ -5,6 +5,9 @@ import ContactForm from './components/ContactForm/ContactForm'
 import Footer from './components/Footer/Footer'
 import Cards from './components/Cards/Cards'
 import About from './components/About/About'
+import Portfolio from './components/Portfolio/Portfolio'
+import Clients from './components/Clients/Clients'
+import Feedback from './components/Feedback/Feedback'
 
 function App() {
   return (
@@ -14,8 +17,11 @@ function App() {
       <Services></Services>
       <Cards></Cards>
       <About></About>
+      <Portfolio></Portfolio>
+      <Clients></Clients>
+      <Feedback></Feedback>
       <ContactForm></ContactForm>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   )
 }

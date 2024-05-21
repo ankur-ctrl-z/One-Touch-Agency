@@ -19,9 +19,9 @@ const Cards = () => {
                 <div className="h-full bg-gray-100 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative">
                   <h1 className="title-font sm:text-xl text-lg font-medium text-gray-900 mb-3">
                     <CountUp start={0} end={150} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
-                    + <br></br>
+                    + <br />
                     <div className='pt-3 text-sm'>
-                       Event Done 
+                      Event Done
                     </div>
                   </h1>
                 </div>
@@ -34,9 +34,9 @@ const Cards = () => {
                 <div className="h-full bg-gray-100 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative">
                   <h1 className="title-font sm:text-xl text-lg font-medium text-gray-900 mb-3">
                     <CountUp start={0} end={10} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
-                    + <br></br>
+                    + <br />
                     <div className='pt-3 text-sm'>
-                       Years of Experience 
+                      Years of Experience
                     </div>
                   </h1>
                 </div>
@@ -49,9 +49,9 @@ const Cards = () => {
                 <div className="h-full bg-gray-100 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative">
                   <h1 className="title-font sm:text-xl text-lg font-medium text-gray-900 mb-3">
                     <CountUp start={0} end={200} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
-                    + <br></br>
+                    + <br />
                     <div className='pt-3 text-sm'>
-                       Happy Clients 
+                      Happy Clients
                     </div>
                   </h1>
                 </div>
@@ -64,9 +64,9 @@ const Cards = () => {
                 <div className="h-full bg-gray-100 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative">
                   <h1 className="title-font sm:text-xl text-lg font-medium text-gray-900 mb-3">
                     <CountUp start={0} end={150} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
-                    + <br></br>
+                    + <br />
                     <div className='pt-3 text-sm'>
-                       Vendors 
+                      Vendors
                     </div>
                   </h1>
                 </div>
@@ -75,11 +75,16 @@ const Cards = () => {
           </div>
         </div>
       </div>
+      <div className='text-9xl font-bold pl-44 pt-20'>
+        <h1 className='text-white'>We are <span className=' text-yellow-500'>Everywhere</span></h1>
+      </div>
+      <div className='w-full bg-gray-900 h-52'></div>
     </div>
   );
 };
 
 export default Cards;
+
 
 
 
