@@ -12,12 +12,12 @@ const About = () => {
           
           <div className="lg:w-1/4 w-full lg:h-auto h-32 object-cover object-center rounded-lg mb-6 lg:mb-0">
             <h1 className="text-white text-center text-2xl">Founder</h1>
-            <img alt="founder" className="w-full h-full" src="https://dummyimage.com/200x200" />
+            <img alt="founder" className="w-full h-full border border-yellow-500" src="" />
           </div>
 
           <div className="lg:w-1/4 w-full lg:h-auto h-32 object-cover object-center rounded-lg mb-6 lg:mb-0 lg:pl-6 pt-12">
             <h1 className="text-white text-center text-2xl">Manager</h1>
-            <img alt="manager" className="w-full h-full" src="https://dummyimage.com/200x200" />
+            <img alt="manager" className="w-full h-full border border-yellow-500" src="" />
           </div>
 
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 pl-5">

@@ -16,11 +16,11 @@ const Cards = () => {
           <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
             <VisibilitySensor partialVisibility>
               {({ isVisible }) => (
-                <div className="h-full bg-gray-100 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative">
-                  <h1 className="title-font sm:text-xl text-lg font-medium text-gray-900 mb-3">
+                <div className="h-full bg-gray-900 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
+                  <h1 className="title-font text-2xl font-medium text-white mb-3">
                     <CountUp start={0} end={150} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
                     + <br />
-                    <div className='pt-3 text-sm'>
+                    <div className='pt-3 text-2xl'>
                       Event Done
                     </div>
                   </h1>
@@ -31,11 +31,11 @@ const Cards = () => {
           <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
             <VisibilitySensor partialVisibility>
               {({ isVisible }) => (
-                <div className="h-full bg-gray-100 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative">
-                  <h1 className="title-font sm:text-xl text-lg font-medium text-gray-900 mb-3">
+                <div className="h-full bg-gray-900 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
+                  <h1 className="title-font text-2xl font-medium text-white mb-3">
                     <CountUp start={0} end={10} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
                     + <br />
-                    <div className='pt-3 text-sm'>
+                    <div className='pt-3 text-2xl'>
                       Years of Experience
                     </div>
                   </h1>
@@ -46,11 +46,11 @@ const Cards = () => {
           <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
             <VisibilitySensor partialVisibility>
               {({ isVisible }) => (
-                <div className="h-full bg-gray-100 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative">
-                  <h1 className="title-font sm:text-xl text-lg font-medium text-gray-900 mb-3">
+                <div className="h-full bg-gray-900 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
+                  <h1 className="title-font text-2xl font-medium text-white mb-3">
                     <CountUp start={0} end={200} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
                     + <br />
-                    <div className='pt-3 text-sm'>
+                    <div className='pt-3 text-2xl'>
                       Happy Clients
                     </div>
                   </h1>
@@ -61,11 +61,11 @@ const Cards = () => {
           <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
             <VisibilitySensor partialVisibility>
               {({ isVisible }) => (
-                <div className="h-full bg-gray-100 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative">
-                  <h1 className="title-font sm:text-xl text-lg font-medium text-gray-900 mb-3">
+                <div className="h-full bg-gray-900 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
+                  <h1 className="title-font text-2xl font-medium text-white mb-3">
                     <CountUp start={0} end={150} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
                     + <br />
-                    <div className='pt-3 text-sm'>
+                    <div className='pt-3 text-2xl'>
                       Vendors
                     </div>
                   </h1>

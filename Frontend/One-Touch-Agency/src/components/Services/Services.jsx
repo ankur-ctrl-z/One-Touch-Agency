@@ -8,7 +8,6 @@ const Services = () => {
           </h1>
         </div>
         <div className="flex flex-wrap -m-4">
-          {/* Tailoring Strategies */}
           <div className="xl:w-1/3 md:w-1/2 p-4">
             <div className="h-56 flex flex-col justify-center items-center">
               <p className="leading-relaxed text-opacity-80 text-4xl pt-4 text-center font-bold">
@@ -22,7 +21,7 @@ const Services = () => {
 
           {/* MICE */}
           <a href="" className="xl:w-1/3 md:w-1/2 p-4">
-            <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
+            <div className="border border-yellow-500 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
                   fill="none"
@@ -44,7 +43,7 @@ const Services = () => {
 
           {/* Awards Event */}
           <a href="" className="xl:w-1/3 md:w-1/2 p-4">
-            <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
+            <div className="border border-yellow-500 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
                   fill="none"
@@ -65,7 +64,7 @@ const Services = () => {
 
           {/* Theme Party */}
           <a href="" className="xl:w-1/3 md:w-1/2 p-4">
-            <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
+            <div className="border border-yellow-500 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
                   fill="none"
@@ -85,7 +84,7 @@ const Services = () => {
 
           {/* Corporate Events */}
           <a href="" className="xl:w-1/3 md:w-1/2 p-4">
-            <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
+            <div className="border border-yellow-500 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
                   fill="none"
@@ -105,7 +104,7 @@ const Services = () => {
 
           {/* Stall Fabrication */}
           <a href="" className="xl:w-1/3 md:w-1/2 p-4">
-            <div className="border border-gray-700 border-opacity-75 p-6 rounded-lg h-56">
+            <div className="border border-yellow-500 border-opacity-75 p-6 rounded-lg h-56">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-purple-400 mb-4">
                 <svg
                   fill="none"
