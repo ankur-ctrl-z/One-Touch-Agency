@@ -33,10 +33,10 @@ const NavBar = () => {
         </div>
 
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-xl justify-center">
-          <a className="nav-link mr-8">Home</a>
-          <a className="nav-link mr-8">About Us</a>
-          <a className="nav-link mr-8">Services</a>
-          <a className="nav-link mr-8">Portfolio</a>
+          <a href='#home' className="nav-link mr-8">Home</a>
+          <a href='#about' className="nav-link mr-8">About Us</a>
+          <a href='#services' className="nav-link mr-8">Services</a>
+          <a href='#portfolio' className="nav-link mr-8">Portfolio</a>
         </nav>
 
         <div className="flex items-center">

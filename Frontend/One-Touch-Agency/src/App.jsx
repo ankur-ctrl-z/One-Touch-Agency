@@ -13,24 +13,41 @@ import Feedback from './components/Feedback/Feedback'
 
 function App() {
   return (
-    <div>
-      <NavBar></NavBar>
-      <Video></Video>
-      <Services></Services>
-      <Cards></Cards>
-      <About></About>
-      <Portfolio></Portfolio>
-      <Clients></Clients>
-      <Feedback></Feedback>
-      <ContactForm></ContactForm>
-      <Footer></Footer>
+      <div>
+        <NavBar></NavBar>
+        <div id='home'>
+          <Video></Video>
+        </div>
 
+        <div id='services'>
+          <Services></Services>
+        </div>
 
+        <div id='cards'>
+          <Cards></Cards>
+        </div>
 
-      {/* <OurServices2></OurServices2> */}
-      {/* <OutPortfolio2></OutPortfolio2> */}
+        <div id='about'>
+          <About></About>
+        </div>
 
-    </div>
+        <div id='portfolio'>
+          <Portfolio></Portfolio>
+        </div>
+
+        <div id='clients'>
+          <Clients></Clients>
+        </div>
+
+        <div id='feedback'>
+          <Feedback></Feedback>
+        </div>
+
+        <div id='contact'>
+          <ContactForm></ContactForm>
+        </div>
+        <Footer></Footer>
+      </div>
   )
 }
 
