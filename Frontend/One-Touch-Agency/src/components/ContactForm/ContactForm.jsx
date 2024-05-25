@@ -1,6 +1,66 @@
+import { useState } from "react";
+
 const ContactForm = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
+  const [services, setServices] = useState('');
+
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  const handleEmailChange = function(event) {
+    setEmail(event.target.value);
+    setError('')
+  }
+
+  const handleServicesChange = function(event) {
+    setServices(event.target.value)
+  }
+
+  const handleMessagesChange = function(event) {
+    setMessage(event.target.value)
+  }
+
+  const handleButtonClick = async function() {
+    if (!validateEmail(email)) {
+      setError('Incorrect email formate.')
+      return;
+    }
+    try {
+      const response = await fetch('http://localhost:3000/save-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({email, message, services})
+      });
+
+      if (response.ok) {
+        console.log('Data saved successfully!')
+        setEmail('');
+        setMessage('');
+        setServices('');
+      } else {
+        const responseData = await response.json();
+        console.log('Response data:', responseData)
+
+        if (responseData.error == "Email already exists") {
+          setError('Email already exists');
+        } else {
+          console.log('Failed to save email data', responseData.error);
+        }
+      }
+    } catch (error) {
+      console.log('An error occurred while saving the data:', error);
+    }
+  }
+
   return (
-    <section className="text-gray-600 body-font relative bg-gray-900">
+    <div className="text-gray-600 body-font relative bg-gray-900">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
@@ -36,6 +96,8 @@ const ContactForm = () => {
               type="email"
               id="email"
               name="email"
+              value={email}
+              onChange={handleEmailChange}
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -45,21 +107,27 @@ const ContactForm = () => {
               type="text"
               id="services"
               name="services"
+              onChange={handleServicesChange}
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <div className="relative mb-4 pl-5 pr-5">
             <label htmlFor="message" className="leading-7 text-lg text-gray-600">Messages</label>
-            <textarea
+            <input
               id="message"
               name="message"
+              onChange={handleMessagesChange}
               className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-            ></textarea>
+            ></input>
           </div>
-          <button className="text-white bg-indigo-500 border-0 pl-5 pr-5 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+          <button onClick={handleButtonClick} className="text-white bg-indigo-500 border-0 pl-5 pr-5 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+           {/* Highlighted Line */}
+          <div style={{ minHeight: '1.5rem' }}>
+          {error && <p className="text-red-600">{error}</p>}
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

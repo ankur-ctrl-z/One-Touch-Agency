@@ -7,7 +7,6 @@ export default {
   theme: {
     extend: {
       transitionDuration: {
-        'slow': '1s',
       },
     },
   },
