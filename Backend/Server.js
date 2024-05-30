@@ -1,10 +1,17 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import SiteForgeInputModel from './db';
+import connectDB from './db';
+import nodemailer from 'nodemailer';
 import cors from 'cors';
 import zod from 'zod'
 
+const app = express();
 const PORT = 3000;
+
+app.use(express.json());
+app.use(cors());
+app.use(bodyParser.json());
 
 const inputsSchema = zod.object({
     email: zod.string().email(),
@@ -27,13 +34,45 @@ async function checkDuplicateEmail (req,res,next) {
 
 }
 
-const app = express();
+connectDB();
 
-app.use(express.json());
-app.use(cors());
-app.use(bodyParser.json());
+const EMAIL_USER = 'your-email@gmail.com';
+const EMAIL_PASS = 'your-email-password';
+
+// sending data to client's email
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: EMAIL_USER,
+        pass: EMAIL_PASS
+    }
+})
 
 // defining routes
+
+app.post('/submit', async (req, res) => {
+    try {
+      const formData = new FormData(req.body);
+      await formData.save();
+  
+      const mailOptions = {
+        from: EMAIL_USER,
+        to: EMAIL_USER,
+        subject: 'New Form Submission',
+        text: `You have a new form submission:\n\nEmail: ${req.body.email}\nService: ${req.body.service}\nMessage: ${req.body.message}`
+      };
+  
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          return res.status(500).send('Error sending email: ' + error.message);
+        }
+        res.status(200).send('Form data saved and email sent successfully.');
+      });
+    } catch (err) {
+      res.status(500).send('Error saving data: ' + err.message);
+    }
+});
 
 app.post('/save-email',checkDuplicateEmail, async function(req,res){
     const {email, message, services} = req.body;

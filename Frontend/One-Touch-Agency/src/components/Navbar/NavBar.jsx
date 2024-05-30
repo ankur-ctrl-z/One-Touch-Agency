@@ -40,13 +40,13 @@ const NavBar = () => {
         </nav>
 
         <div className="flex items-center">
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/onetouchagency_/" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="text-3xl mx-2 hover:text-pink-800" />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/company/one-touch-agency1/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="text-3xl mx-2 hover:text-blue-600" />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/p/Onetouch-agency-100076203769169/" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="text-3xl mx-2 hover:text-blue-500" />
           </a>
           <a href="" target="_blank" rel="noopener noreferrer">

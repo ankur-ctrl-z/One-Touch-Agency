@@ -5,20 +5,29 @@ const Footer = () => {
     <div className="text-gray-600 body-font bg-gray-900">
       <div className="container px-5 py-20 mx-auto">
         {/* Break Line */}
-        <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-        </div>
+        <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
         <div className="w-full flex flex-col items-center">
           <h1 className="title-font text-3xl text-white tracking-widest mb-3 mt-5 font-bold">
             GET THE LATEST UPDATES
           </h1>
         </div>
-        <div className='flex justify-end align-top text-white font-bold pt-8 mt-5'>
-          <h1 className='text-3xl -mt-2'>Address</h1>
+        <div className='flex justify-end align-top text-white'>
+        <p className='text-2xl pl-3'>
+          <span className='text-3xl block mb-1 mt-22'>Address</span>
+        <br />
+        147-E, 1st Floor,<br />
+        Panchratna<br />
+        Building, Opera<br />
+        House, Mumbai-<br />
+        400004
+        <br></br>
+        <span className='block mt-10'>GST No: 27AAAPL1234C1ZQ</span>
+        </p>
         </div>
         <div className="flex flex-wrap md:text-left text-center order-first">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4 -mt-20">
-            <h1 className="text-white text-3xl font-bold -mt-12">One Touch Agency</h1>
-            <nav className="list-none mb-10 text-white text-2xl mt-10 space-y-3">
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4 -mt-48">
+            <h1 className="text-white text-3xl font-bold -mt-28">One Touch Agency</h1>
+            <nav className="list-none mb-8 text-white text-2xl mt-8 space-y-2">
               <li>
                 <a className="text-white hover:text-gray-800" href="#">Home</a>
               </li>
@@ -33,13 +42,13 @@ const Footer = () => {
               </li>
             </nav>
             <div className="flex items-center text-white pt-5 -ml-2">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/onetouchagency_/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-3xl mx-2 hover:text-pink-800" />
               </a>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/one-touch-agency1/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="text-3xl mx-2 hover:text-blue-600" />
               </a>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/p/Onetouch-agency-100076203769169/" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="text-3xl mx-2 hover:text-blue-500" />
               </a>
               <a href="" target="_blank" rel="noopener noreferrer">
@@ -63,6 +72,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
+          <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
         </div>
       </div>
     </div>

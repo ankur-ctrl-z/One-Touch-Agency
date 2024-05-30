@@ -18,7 +18,7 @@ const Cards = () => {
               {({ isVisible }) => (
                 <div className="h-full bg-gray-900 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
                   <h1 className="title-font text-2xl font-medium text-white mb-3">
-                    <CountUp start={0} end={150} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
+                    <CountUp start={0} end={500} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
                     + <br />
                     <div className='pt-3 text-2xl'>
                       Event Done
@@ -48,7 +48,7 @@ const Cards = () => {
               {({ isVisible }) => (
                 <div className="h-full bg-gray-900 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
                   <h1 className="title-font text-2xl font-medium text-white mb-3">
-                    <CountUp start={0} end={200} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
+                    <CountUp start={0} end={350} duration={4} redraw={true} delay={0} useEasing={true} useGrouping={true} separator="," startOnMount={isVisible} />
                     + <br />
                     <div className='pt-3 text-2xl'>
                       Happy Clients

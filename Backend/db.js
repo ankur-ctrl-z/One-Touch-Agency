@@ -1,11 +1,14 @@
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb+srv://Team-Access:5.Lc%3AhTK67zQh.j@unarrow-users-emails.qov4tu3.mongodb.net/').then(() => {
-    console.log('MongoDB connected')
-})
-.catch((err) => {
-    console.log('MongoDB connection error:',err)
-})
+const connectDB = async () => {
+    try {
+        await mongoose.connect('mongodb+srv://Team-Access:5.Lc%3AhTK67zQh.j@unarrow-users-emails.qov4tu3.mongodb.net/');
+        console.log('MongoDB connected')
+    } catch (error) {
+        console.log('MongoDB connection error:',error);
+        process.exit(1);
+    }
+}
 // Defining Schema
 const userSchema = new mongoose.Schema({
     // EMAIL
@@ -39,4 +42,4 @@ const SiteForgeInputModel = mongoose.model(
     "SiteForgeInputModel" , userSchema
 )
 
-export default SiteForgeInputModel;
+module.exports = {connectDB, SiteForgeInputModel};

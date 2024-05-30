@@ -44,9 +44,10 @@ const ContactForm = () => {
         setEmail('');
         setMessage('');
         setServices('');
+        setError('')
       } else {
         const responseData = await response.json();
-        console.log('Response data:', responseData)
+        console.log('Response data:', responseData);
 
         if (responseData.error == "Email already exists") {
           setError('Email already exists');
@@ -61,6 +62,7 @@ const ContactForm = () => {
 
   return (
     <div className="text-gray-600 body-font relative bg-gray-900">
+        <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
@@ -78,13 +80,18 @@ const ContactForm = () => {
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-              <p className="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div>
+              <p className="mt-1 font-bold">MUMBAI</p>
+              <br />
+              <span className='-mt-2'>147-E,1st Floor,Panchratna <br></br>
+              Building, Opera
+              House, Mumbai-
+              400004</span>
+              </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-              <a className="text-indigo-500 leading-relaxed">example@email.com</a>
+              <a className="text-indigo-500 leading-relaxed">contact@onetouchagency.com</a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-              <p className="leading-relaxed">123-456-7890</p>
+              <p className="leading-relaxed">+91 7021377482</p>
             </div>
           </div>
         </div>
@@ -98,7 +105,7 @@ const ContactForm = () => {
               name="email"
               value={email}
               onChange={handleEmailChange}
-              className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <div className="relative mb-4 pl-5 pr-5">
@@ -108,19 +115,19 @@ const ContactForm = () => {
               id="services"
               name="services"
               onChange={handleServicesChange}
-              className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
-          <div className="relative mb-4 pl-5 pr-5">
-            <label htmlFor="message" className="leading-7 text-lg text-gray-600">Messages</label>
+          <div className="relative mb-4 pl-5 pr-5 w-full">
+            <label htmlFor="message" className="leading-7 text-lg text-gray-600 w-full">Messages</label>
             <input
               id="message"
               name="message"
               onChange={handleMessagesChange}
-              className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></input>
           </div>
-          <button onClick={handleButtonClick} className="text-white bg-indigo-500 border-0 pl-5 pr-5 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+          <button onClick={handleButtonClick} className="text-white bg-yellow-500 border-0 pl-5 pr-5 py-2 px-6 focus:outline-none hover:bg-gray-900 rounded text-lg mr-5 ml-5 overflow-hidden">Send</button>
            {/* Highlighted Line */}
           <div style={{ minHeight: '1.5rem' }}>
           {error && <p className="text-red-600">{error}</p>}
