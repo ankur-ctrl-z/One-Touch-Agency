@@ -1,3 +1,4 @@
+import { FaCheckCircle } from 'react-icons/fa';
 import founderImage from '../../assets/Founder & Manager image/founder image.jpg';
 import managerImage from '../../assets/Founder & Manager image/manager image.jpg';
 
@@ -5,7 +6,7 @@ const About = () => {
   return (
     <div className="text-gray-600 body-font overflow-hidden bg-gray-900">
       {/* Break Line */}
-      <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
+      <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
       <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white flex justify-center pt-12">
         About Us
       </h1>
@@ -26,10 +27,18 @@ const About = () => {
             <div className="flex mb-4">
               <h2 className="text-white ml-3 text-4xl">Crafting Unforgettable Experiences:<br /> <span className='text-yellow-500'>Your Event, Our Expertise</span></h2>
             </div>
-            <h3 className="leading-relaxed text-white pl-5">We create custom solutions that fit your needs and budget perfectly.</h3>
-            <h3 className="leading-relaxed text-white pl-5">Our founder has over 20 years of experience in event management.</h3>
-            <h3 className="leading-relaxed text-white pl-5">We ensure your event is delivered on time with exceptional results.</h3>
-
+            <div className="leading-relaxed text-white pl-5 flex items-start mb-2">
+              <FaCheckCircle className="text-yellow-500 mr-2 mt-2" />
+              <h3>We create custom solutions that fit your needs and budget perfectly.</h3>
+            </div>
+            <div className="leading-relaxed text-white pl-5 flex items-start mb-2">
+              <FaCheckCircle className="text-yellow-500 mr-2 mt-2" />
+              <h3>Our founder has over 20 years of experience in event management.</h3>
+            </div>
+            <div className="leading-relaxed text-white pl-5 flex items-start mb-2">
+              <FaCheckCircle className="text-yellow-500 mr-2 mt-2" />
+              <h3>We ensure your event is delivered on time with exceptional results.</h3>
+            </div>
 
             {/* Break Line */}
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
@@ -44,6 +53,7 @@ const About = () => {
 };
 
 export default About;
+
 
 
 
