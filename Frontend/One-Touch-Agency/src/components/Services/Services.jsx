@@ -24,11 +24,14 @@ const Services = () => {
           <div className="xl:w-1/3 md:w-1/2 p-4">
             <div className="h-56 flex flex-col justify-center items-center">
               <p className="leading-relaxed text-opacity-80 text-4xl pt-4 text-center font-bold text-white">
-                Discover our standout <br /> services for<br /> unforgettable events.
-              </p>
-              <button className="flex mx-auto mt-8 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
-                View All
-              </button>
+                <span className='text-white'>Discover our standout</span> <br /> <span className='text-white'>services</span> <span className='text-yellow-300'>for</span><br/><span className='text-yellow-300'>unforgettable events.</span> 
+                </p>
+                <div className="mt-4 ml-2 md:ml-6 lg:ml-6 flex-shrink-0 border-[3px] border-white py-2 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-all duration-300 hover:text-[#F2F625] hover:border-[#F2F625] hover:py-3 hover:px-7">
+                  <button className="text-white text-[18px]">View All</button>
+                </div>
+
+
+
             </div>
           </div>
 
@@ -61,6 +64,4 @@ const Services = () => {
 };
 
 export default Services;
-
-
 

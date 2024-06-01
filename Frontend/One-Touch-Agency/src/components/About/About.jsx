@@ -42,8 +42,8 @@ const About = () => {
 
             {/* Break Line */}
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
-            <div className="flex">
-              <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Get In Touch</button>
+            <div className="mt-4 ml-2 md:ml-6 lg:ml-6 flex-shrink-0 border-[3px] border-white py-2 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-all duration-300 hover:text-[#F2F625] hover:border-[#F2F625] hover:py-3 hover:px-7">
+              <button className="text-white text-[18px]">View All</button>
             </div>
           </div>
         </div>

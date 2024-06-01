@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaQuoteLeft, FaQuoteRight, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import clientImage1 from '../../assets/Founder & Manager image/founder image.jpg';
 import clientImage2 from '../../assets/Founder & Manager image/manager image.jpg';
@@ -27,6 +27,26 @@ const feedbacks = [
 
 function Feedback() {
   const [currentFeedback, setCurrentFeedback] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    setDisplayedText('');
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex === feedbacks[currentFeedback].text.length) {
+        clearInterval(interval);
+        return;
+      }
+      setDisplayedText((prevText) => prevText + feedbacks[currentFeedback].text[currentIndex]);
+      currentIndex++;
+    }, 100);
+  
+    return () => {
+      clearInterval(interval);
+      setDisplayedText('');
+    };
+  }, [currentFeedback]);
+  
 
   const handleNext = () => {
     setCurrentFeedback((prev) => (prev + 1) % feedbacks.length);
@@ -51,7 +71,7 @@ function Feedback() {
         <div className="text-gray-900 text-xl text-center flex items-center mt-10">
           <FaQuoteLeft className="text-4xl text-gray-300 mr-4" />
           <div>
-            <p className="mb-4">{feedbacks[currentFeedback].text}</p>
+            <p className="mb-4">{displayedText}</p>
             <p className="font-bold">- {feedbacks[currentFeedback].name}, {feedbacks[currentFeedback].company}</p>
           </div>
           <FaQuoteRight className="text-4xl text-gray-300 ml-4" />
@@ -70,6 +90,9 @@ function Feedback() {
 }
 
 export default Feedback;
+
+
+
 
 
 
