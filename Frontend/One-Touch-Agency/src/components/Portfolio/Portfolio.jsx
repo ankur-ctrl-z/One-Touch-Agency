@@ -1,9 +1,20 @@
+import { useState } from 'react';
 import image1 from '../../assets/Portfolio Images/image 1.jpg';
 import image2 from '../../assets/Portfolio Images/image 2.jpg';
-import image3 from '../../assets/Portfolio Images/image 3.jpg'
+import image3 from '../../assets/Portfolio Images/image 3.jpg';
 import image4 from '../../assets/Portfolio Images/image 4.jpg';
 
 const Portfolio = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <div className="bg-gray-900">
       <div>
@@ -18,18 +29,42 @@ const Portfolio = () => {
       </div>
 
       <div className="flex justify-start">
-        <div className="w-[30rem] h-[30rem] border border-yellow-500 ml-40 rounded-md overflow-hidden">
+        <div
+          className={`w-[30rem] h-[30rem] border border-yellow-500 ml-40 rounded-md overflow-hidden transition-transform duration-500 ${
+            isHovered ? 'hover:-translate-y-2 hover:shadow-lg' : ''
+          }`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <img src={image1} alt="image 1" className="w-full h-full object-cover"/>
         </div>
-        <div className="w-[22rem] h-[15rem] border border-yellow-500 ml-4 rounded-md overflow-hidden">
+        <div
+          className={`w-[22rem] h-[15rem] border border-yellow-500 ml-4 rounded-md overflow-hidden transition-transform duration-500 ${
+            isHovered ? 'hover:-translate-y-2 hover:shadow-lg' : ''
+          }`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <img src={image2} alt="image 2" className="w-full h-full object-cover"/>
         </div>
-        <div className="w-[22rem] h-[15rem] border border-yellow-500 ml-4 rounded-md overflow-hidden">
+        <div
+          className={`w-[22rem] h-[15rem] border border-yellow-500 ml-4 rounded-md overflow-hidden transition-transform duration-500 ${
+            isHovered ? 'hover:-translate-y-2 hover:shadow-lg' : ''
+          }`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <img src={image3} alt="image 3" className="w-full h-full object-cover"/>
         </div>
       </div>
       <div className="flex justify-end -mt-56 mr-32">
-        <div className="w-[45rem] h-[14rem] border border-yellow-500 rounded-md overflow-hidden">
+        <div
+          className={`w-[45rem] h-[14rem] border border-yellow-500 rounded-md overflow-hidden transition-transform duration-500 ${
+            isHovered ? 'hover:-translate-y-2 hover:shadow-lg' : ''
+          }`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <img src={image4} alt="image 4" className="w-full h-full object-cover"/>
         </div>
       </div>
@@ -44,6 +79,11 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+
+
+
+
 
   
   
