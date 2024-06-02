@@ -25,17 +25,17 @@ const Portfolio = () => {
     <div className="bg-gray-900">
       <div>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white flex justify-center pt-12">
+          <h1 className="sm:text-5xl text-2xl font-medium title-font mb-0 text-white flex justify-center pt-12">
             Our Portfolio
           </h1>
-          <h2 className="text-white mb-4 text-4xl mt-3 font-semibold">
+          <h2 className="text-white mb-2 text-4xl mt-3 font-semibold">
             Browse Our <span className="text-yellow-500">Successful Events</span>
           </h2>
         </div>
       </div>
       <div className="flex justify-start">
         <div
-          className={`w-[30rem] h-[30rem] border border-yellow-500 ml-40 rounded-md overflow-hidden transition-transform duration-500 ${
+          className={`w-[30rem] h-[30rem] mt-5 border border-yellow-500 ml-40 rounded-md overflow-hidden transition-transform duration-500 ${
             isHovered ? 'hover:-translate-y-2 hover:shadow-lg' : ''
           }`}
           onMouseEnter={handleMouseEnter}
@@ -44,7 +44,7 @@ const Portfolio = () => {
           <img src={image1} alt="image 1" className="w-full h-full object-cover" />
         </div>
         <div
-          className={`w-[22rem] h-[15rem] border border-yellow-500 ml-4 rounded-md overflow-hidden transition-transform duration-500 ${
+          className={`w-[22rem] h-[15rem] mt-5 border border-yellow-500 ml-4 rounded-md overflow-hidden transition-transform duration-500 ${
             isHovered ? 'hover:-translate-y-2 hover:shadow-lg' : ''
           }`}
           onMouseEnter={handleMouseEnter}
@@ -53,7 +53,7 @@ const Portfolio = () => {
           <img src={image2} alt="image 2" className="w-full h-full object-cover" />
         </div>
         <div
-          className={`w-[22rem] h-[15rem] border border-yellow-500 ml-4 rounded-md overflow-hidden transition-transform duration-500 ${
+          className={`w-[22rem] h-[15rem] mt-5 border border-yellow-500 ml-4 rounded-md overflow-hidden transition-transform duration-500 ${
             isHovered ? 'hover:-translate-y-2 hover:shadow-lg' : ''
           }`}
           onMouseEnter={handleMouseEnter}
@@ -75,12 +75,7 @@ const Portfolio = () => {
       </div>
       {/* Button Container */}
       <div className="flex justify-end pr-8 pb-8 mr-32">
-        <button
-          className="flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
-          onClick={handleButtonClick}
-        >
-          Checkout More
-        </button>
+      <button onClick={handleButtonClick} className="ml-36 md:ml-40 lg:ml-80 border-[3px] border-white text-white text-2xl flex justify-center py-5 px-12 mt-5 mb-5 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer">Check Out More</button>
       </div>
     </div>
   );

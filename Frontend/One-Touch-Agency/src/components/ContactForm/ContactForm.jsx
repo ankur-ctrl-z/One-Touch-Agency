@@ -62,8 +62,9 @@ const ContactForm = () => {
 
   return (
     <div className="text-gray-600 body-font relative bg-gray-900">
-        <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
-      <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+        <hr className="ml-36" style={{ border: '0.5px solid yellow', width: '81%',}} />
+        <h1 className="text-5xl font-medium flex justify-center text-white mt-5">Contact Us</h1>
+      <div className="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
         <iframe
          width="100%"

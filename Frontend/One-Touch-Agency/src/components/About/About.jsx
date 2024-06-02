@@ -13,11 +13,11 @@ const About = () => {
   return (
     <div className="text-gray-600 body-font overflow-hidden bg-gray-900">
       {/* Break Line */}
-      <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
-      <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white flex justify-center pt-12">
+      <hr className="ml-40" style={{ border: '0.5px solid yellow', width: '81%',}} />
+      <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white flex justify-center pt-8">
         About Us
       </h1>
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-12 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           
           <div className="h-[26rem] w-[14rem] relative rounded-lg mb-6 lg:mb-0">
@@ -32,18 +32,18 @@ const About = () => {
 
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 pl-5">
             <div className="flex mb-4">
-              <h2 className="text-white ml-3 text-4xl">Crafting Unforgettable Experiences:<br /> <span className='text-yellow-500'>Your Event, Our Expertise</span></h2>
+              <h2 className="text-white ml-3 text-4xl">Crafting Unforgettable Experiences:<br /> <span className='text-yellow-300'>Your Event, Our Expertise</span></h2>
             </div>
             <div className="leading-relaxed text-white pl-5 flex items-start mb-2">
-              <FaCheckCircle className="text-yellow-500 mr-2 mt-2" />
+              <FaCheckCircle className="text-yellow-300 mr-2 mt-2" />
               <h3>We create custom solutions that fit your needs and budget perfectly.</h3>
             </div>
             <div className="leading-relaxed text-white pl-5 flex items-start mb-2">
-              <FaCheckCircle className="text-yellow-500 mr-2 mt-2" />
+              <FaCheckCircle className="text-yellow-300 mr-2 mt-2" />
               <h3>Our founder has over 20 years of experience in event management.</h3>
             </div>
             <div className="leading-relaxed text-white pl-5 flex items-start mb-2">
-              <FaCheckCircle className="text-yellow-500 mr-2 mt-2" />
+              <FaCheckCircle className="text-yellow-300 mr-2 mt-2" />
               <h3>We ensure your event is delivered on time with exceptional results.</h3>
             </div>
 
@@ -55,6 +55,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <hr className="ml-40 mt-16" style={{ border: '0.5px solid yellow', width: '81%',}} />
     </div>
   );
 };

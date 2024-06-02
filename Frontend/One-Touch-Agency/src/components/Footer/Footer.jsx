@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
   return (
     <div className="body-font bg-gray-900 relative">
-      <div className="container px-5 py-20 mx-auto">
+      <div className="container px-5 py-4 mx-auto">
         {/* Break Line */}
         <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
         <div className="w-full flex flex-col items-center">
@@ -29,16 +29,16 @@ const Footer = () => {
             <h1 className="text-white text-3xl font-bold -mt-28">One Touch Agency</h1>
             <nav className="list-none mb-8 text-white text-2xl mt-8 space-y-2">
               <li>
-                <a className="text-white hover:text-yellow-500" href="#home">Home</a>
+                <a className="text-white hover:text-yellow-300" href="#home">Home</a>
               </li>
               <li>
-                <a className="text-white hover:text-yellow-500" href="#about">About Us</a>
+                <a className="text-white hover:text-yellow-300" href="#about">About Us</a>
               </li>
               <li>
-                <a className="text-white hover:text-yellow-500" href="#services">Services</a>
+                <a className="text-white hover:text-yellow-300" href="#services">Services</a>
               </li>
               <li>
-                <a className="text-white hover:text-yellow-500" href="#portfolio">Portfolio</a>
+                <a className="text-white hover:text-yellow-300" href="#portfolio">Portfolio</a>
               </li>
             </nav>
             <div className="flex items-center text-white pt-5 -ml-2">
@@ -74,12 +74,11 @@ const Footer = () => {
           </div>
           <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
         </div>
-        {/* Placing Designed by unarrow.com text */}
-        <div className='flex justify-center text-white text-lg mt-3'>
+        <div className='flex justify-center items-center text-white text-lg mt-3' style={{ marginBottom: '0', paddingBottom: '0' }}>
           <span className='mr-2'>@2024 OneTouch Agency</span>
           <span className='mr-2'>|</span>
           <span className='mr-2'>Designed by</span>
-          <a href="https://www.unarrow.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300">unarrow.com</a>
+          <a href="https://www.unarrow.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300">Unarrow Digital Solutions</a>
         </div>
       </div>
     </div>
@@ -87,6 +86,9 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
 
 
 
