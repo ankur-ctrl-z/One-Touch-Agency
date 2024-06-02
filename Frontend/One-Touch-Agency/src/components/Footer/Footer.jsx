@@ -2,7 +2,7 @@ import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div className="body-font bg-gray-900">
+    <div className="body-font bg-gray-900 relative">
       <div className="container px-5 py-20 mx-auto">
         {/* Break Line */}
         <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
@@ -12,17 +12,17 @@ const Footer = () => {
           </h1>
         </div>
         <div className='flex justify-end align-top text-white'>
-        <p className='text-2xl pl-3'>
-          <span className='text-3xl block mb-1 mt-22'>Address</span>
-        <br />
-        147-E, 1st Floor,<br />
-        Panchratna<br />
-        Building, Opera<br />
-        House, Mumbai-<br />
-        400004
-        <br></br>
-        <span className='block mt-10'>GSTIN/UIN: 27AJUPA4411G1ZD</span>
-        </p>
+          <p className='text-2xl pl-3'>
+            <span className='text-3xl block mb-1 mt-22'>Address</span>
+            <br />
+            147-E, 1st Floor,<br />
+            Panchratna<br />
+            Building, Opera<br />
+            House, Mumbai-<br />
+            400004
+            <br></br>
+            <span className='block mt-10'>GSTIN/UIN: 27AJUPA4411G1ZD</span>
+          </p>
         </div>
         <div className="flex flex-wrap md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4 -mt-48">
@@ -74,13 +74,22 @@ const Footer = () => {
           </div>
           <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
         </div>
-        <div className='flex justify-center text-white text-lg mt-3'>@2024 OneTouch Agency</div>
+        {/* Placing Designed by unarrow.com text */}
+        <div className='flex justify-center text-white text-lg mt-3'>
+          <span className='mr-2'>@2024 OneTouch Agency</span>
+          <span className='mr-2'>|</span>
+          <span className='mr-2'>Designed by</span>
+          <a href="https://www.unarrow.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300">unarrow.com</a>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Footer;
+
+
+
 
 
 

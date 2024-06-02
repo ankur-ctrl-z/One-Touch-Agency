@@ -1,7 +1,8 @@
-import image1 from '../../assets/Clients images/arihant.png';
-import image2 from '../../assets/Clients images/bhanderi-lab-grown-diamonds.png';
-import image3 from '../../assets/Clients images/KEI Wires and Cabel.png';
-import image4 from '../../assets/Clients images/Tata_Chemicals_Limited_-_Logo.svg.png';
+import { Link } from 'react-scroll';
+import image1 from '../../assets/Clients images/air-asia.png';
+import image2 from '../../assets/Clients images/Tata_Chemicals_Limited_-_Logo.svg.png';
+import image3 from '../../assets/Clients images/heera-zavarat.png';
+import image4 from '../../assets/Clients images/matrix battery.png';
 
 function Clients() {
   return (
@@ -22,13 +23,17 @@ function Clients() {
         </div>
       </div>
       <div className="flex justify-center">
-        <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-4">Be The Next</button>
-      </div> 
+        {/* Use Link from react-scroll to scroll to the contact-form component */}
+        <Link to="contact" smooth={true} duration={500} className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-4">
+          Be The Next
+        </Link>
+      </div>
     </div>
   );
 }
 
 export default Clients;
+
 
 
 

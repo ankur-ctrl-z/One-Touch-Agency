@@ -1,8 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import { FaCheckCircle } from 'react-icons/fa';
 import founderImage from '../../assets/Founder & Manager image/founder image.jpg';
 import managerImage from '../../assets/Founder & Manager image/manager image.jpg';
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleViewAllClick = () => {
+    navigate('/services-2');
+  };
+
   return (
     <div className="text-gray-600 body-font overflow-hidden bg-gray-900">
       {/* Break Line */}
@@ -43,7 +50,7 @@ const About = () => {
             {/* Break Line */}
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
             <div className="mt-4 ml-2 md:ml-6 lg:ml-6 flex-shrink-0 border-[3px] border-white py-2 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-all duration-300 hover:text-[#F2F625] hover:border-[#F2F625] hover:py-3 hover:px-7">
-              <button className="text-white text-[18px]">View All</button>
+              <button onClick={handleViewAllClick} className="text-white text-[18px]">View All</button>
             </div>
           </div>
         </div>
@@ -53,6 +60,8 @@ const About = () => {
 };
 
 export default About;
+
+
 
 
 

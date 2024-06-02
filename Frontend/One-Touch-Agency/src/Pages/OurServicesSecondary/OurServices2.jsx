@@ -1,4 +1,4 @@
-import NavBar from "../../components/Navbar/NavBar"
+import NavBar from '../OurServicesSecondary/NavBar'
 import Footer from "../../components/Footer/Footer"
 
 function OurServices2() {
