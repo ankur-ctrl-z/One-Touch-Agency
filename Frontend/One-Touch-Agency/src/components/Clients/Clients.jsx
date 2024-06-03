@@ -1,14 +1,14 @@
 import { Link } from 'react-scroll';
 import image1 from '../../assets/Clients images/air-asia.png';
 import image2 from '../../assets/Clients images/Tata_Chemicals_Limited_-_Logo.svg.png';
-import image3 from '../../assets/Clients images/heera-zavarat.png';
+import image3 from '../../assets/Clients images/fb.png';
 import image4 from '../../assets/Clients images/matrix battery.png';
 
 function Clients() {
   return (
     <div className="bg-gray-900 w-full">
       <h1 className="sm:text-5xl flex justify-center text-2xl pt-10 font-medium title-font mb-2 text-white">Our Valuable Clients</h1>
-      <div className="flex justify-start p-4 gap-5 pt-16">
+      <div className="flex justify-start p-4 gap-5 pt-12">
         <div className="h-[9rem] w-[16rem] rounded-lg border border-yellow-500 ml-44 flex items-center justify-center">
           <img src={image1} className="w-full h-full object-fill rounded-lg" alt="Arihant" />
         </div>
@@ -23,11 +23,14 @@ function Clients() {
         </div>
       </div>
       <div className="flex justify-center">
-        {/* Use Link from react-scroll to scroll to the contact-form component */}
-        <Link to="contact" smooth={true} duration={500} className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-4">
-          Be The Next
-        </Link>
-      </div>
+      <Link 
+    to="contact" 
+    smooth={true} 
+    duration={500} 
+    className="text-white text-xl flex justify-center py-3 px-6 mt-8 mb-5 border-[3px] border-white rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625] focus:outline-none">
+    Be The Next
+  </Link>
+</div>
     </div>
   );
 }

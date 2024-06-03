@@ -75,8 +75,12 @@ const Portfolio = () => {
       </div>
       {/* Button Container */}
       <div className="flex justify-end pr-8 pb-8 mr-32">
-      <button onClick={handleButtonClick} className="ml-36 md:ml-40 lg:ml-80 border-[3px] border-white text-white text-2xl flex justify-center py-5 px-12 mt-5 mb-5 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer">Check Out More</button>
-      </div>
+  <button 
+    onClick={handleButtonClick} 
+    className="ml-36 md:ml-40 lg:ml-80 border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 mt-8 mb-5 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]">
+    Check Out More
+  </button>
+  </div>
     </div>
   );
 };

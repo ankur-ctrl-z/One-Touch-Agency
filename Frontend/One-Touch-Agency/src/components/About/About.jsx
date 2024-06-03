@@ -49,9 +49,17 @@ const About = () => {
 
             {/* Break Line */}
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
-            <div className="mt-4 ml-2 md:ml-6 lg:ml-6 flex-shrink-0 border-[3px] border-white py-2 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-all duration-300 hover:text-[#F2F625] hover:border-[#F2F625] hover:py-3 hover:px-7">
-              <button onClick={handleViewAllClick} className="text-white text-[18px]">View All</button>
-            </div>
+            <div className="flex justify-end mt-4 mr-5 md:ml-1 lg:ml-2">
+  <button
+    onClick={handleViewAllClick}
+    className="border-[3px] border-white text-white text-xl py-2 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
+  >
+    View All
+  </button>
+</div>
+
+
+
           </div>
         </div>
       </div>
