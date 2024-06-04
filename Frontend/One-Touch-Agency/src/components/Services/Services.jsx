@@ -22,7 +22,7 @@ const Services = () => {
     <div className="text-gray-400 body-font bg-gray-900">
       <div className="container px-5 py-24 mx-auto -mt-12">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-          <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white">
+          <h1 className="sm:text-5xl text-2xl mt-5 font-medium title-font mb-2 text-white">
             Our Services
           </h1>
         </div>
@@ -58,7 +58,7 @@ const Services = () => {
             >
               <div className={`border border-yellow-500 border-opacity-75 p-6 rounded-lg relative overflow-hidden ${clickedIndex === index ? 'h-96' : 'h-64'}`}>
                 <img src={service.img} className={`absolute inset-0 w-full h-full object-cover rounded-lg transition-transform duration-300 ${clickedIndex === index ? 'scale-150' : ''}`} alt={service.title} />
-                <h2 className={`text-2xl text-yellow-300 font-medium title-font absolute bottom-0 left-0 mb-2 ml-4 transition-all duration-300 ${clickedIndex === index ? 'transform -translate-y-20' : ''}`}>
+                <h2 className={`text-2xl text-white font-medium title-font absolute bottom-0 left-0 mb-2 ml-4 transition-all duration-300 ${clickedIndex === index ? 'transform -translate-y-20' : ''}`}>
                   {service.title}
                 </h2>
               </div>

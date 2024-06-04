@@ -37,7 +37,7 @@ function OurServices2() {
   };
 
   const handleBookNow = () => {
-    navigate('/contact-us');
+    navigate('/contact');
   };
 
   const services = [

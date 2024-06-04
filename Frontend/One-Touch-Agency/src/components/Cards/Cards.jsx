@@ -80,7 +80,7 @@ const Cards = () => {
       </div>
       <div className='relative text-9xl font-bold pl-44 pt-20'>
         <h1 className='text-white'>
-          We <span className='text-yellow-500'>are </span><span className=' text-yellow-500'>Every<span className='text-white'>where</span></span>
+          We <span className='text-yellow-500'> <span className='text-white'>a</span>re </span><span className=' text-yellow-500'>Every<span className='text-white'>where</span></span>
         </h1>
       </div>
       <div className='w-full bg-gray-900 h-52'></div>

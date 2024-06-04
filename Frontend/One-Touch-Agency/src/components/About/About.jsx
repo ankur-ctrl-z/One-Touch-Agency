@@ -26,7 +26,7 @@ const About = () => {
           </div>
 
           <div className="lg:w-1/4 w-full lg:h-auto h-32 relative rounded-lg mb-6 lg:mb-0 lg:pl-6 pt-12">
-            <h1 className="text-white text-center text-2xl mb-2">Manager</h1>
+            <h1 className="text-white text-center text-2xl mb-2">Co-Founder</h1>
             <img alt="manager" src={managerImage} className="w-full h-full object-cover border border-yellow-500 rounded-lg" />
           </div>
 
