@@ -14,10 +14,14 @@ const PORT = 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
+const emailSchema = zod.object({
+    email: zod.string().email(),
+});
+
 const inputsSchema = zod.object({
     email: zod.string().email(),
     message: zod.string(),
-    service: zod.string() // Ensure this matches your input
+    service: zod.string()
 });
 
 async function checkDuplicateEmail(req, res, next) {
@@ -43,36 +47,43 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+// Route for submitting data with email, services, and message
 app.post('/submit', async (req, res) => {
-    try {
-        const formData = new SiteForgeInputModel(req.body);
-        await formData.save();
-
-        const mailOptions = {
-            from: EMAIL_USER,
-            to: EMAIL_USER,
-            subject: 'New Form Submission',
-            text: `You have a new form submission:\n\nEmail: ${req.body.email}\nService: ${req.body.service}\nMessage: ${req.body.message}`
-        };
-
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                return res.status(500).send('Error sending email: ' + error.message);
-            }
-            res.status(200).send('Form data saved and email sent successfully.');
-        });
-    } catch (err) {
-        res.status(500).send('Error saving data: ' + err.message);
+    const validateData = inputsSchema.safeParse(req.body);
+  
+    if (!validateData.success) {
+      return res.status(400).json({ error: 'Invalid data' });
     }
-});
+  
+    try {
+      const formData = new SiteForgeInputModel(validateData.data);
+      await formData.save();
+  
+      const mailOptions = {
+        from: EMAIL_USER,
+        to: EMAIL_USER,
+        subject: 'New Form Submission',
+        text: `You have a new form submission:\n\nEmail: ${req.body.email}\nService: ${req.body.service}\nMessage: ${req.body.message}`
+      };
+  
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          return res.status(500).send('Error sending email: ' + error.message);
+        }
+        res.status(200).send('Form data saved and email sent successfully.');
+      });
+    } catch (err) {
+      res.status(500).send('Error saving data: ' + err.message);
+    }
+  });
+  
 
+// Route for submitting only email
 app.post('/save-email', checkDuplicateEmail, async (req, res) => {
-    console.log('Request body:', req.body); // Logging the request body
-    const { email, message, service } = req.body;
-    const validateData = inputsSchema.safeParse({ email, message, service });
+    const { email } = req.body;
+    const validateData = emailSchema.safeParse({ email });
 
     if (!validateData.success) {
-        console.log('Validation error:', validateData.error); // Logging validation errors
         return res.status(400).json({ error: 'Invalid data' });
     }
 
@@ -85,7 +96,6 @@ app.post('/save-email', checkDuplicateEmail, async (req, res) => {
             data: newEntry
         });
     } catch (error) {
-        console.error('Error saving data:', error); // Logging save errors
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
@@ -93,6 +103,12 @@ app.post('/save-email', checkDuplicateEmail, async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FaQuoteLeft, FaQuoteRight, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { RiArrowRightSLine, RiArrowLeftSLine } from 'react-icons/ri';
 import clientImage1 from '../../assets/Founder & Manager image/founder image.jpg';
 import clientImage2 from '../../assets/Founder & Manager image/manager image.jpg';
 import clientImage3 from '../../assets/Founder & Manager image/founder image.jpg';
@@ -60,28 +61,30 @@ function Feedback() {
       <div className="text-5xl font-medium text-white mb-16">
         <h1>What Our Client Says</h1>
       </div>
-      <div className="bg-white w-2/3 h-72 rounded-lg mb-8 relative flex flex-col items-center justify-center p-6 transition-transform duration-500 ease-in-out transform">
-        <img
-          src={feedbacks[currentFeedback].image}
-          alt="Client"
-          className="w-24 h-24 rounded-full absolute top-0 transform -translate-y-1/2 transition-all duration-500"
-          style={{ top: '0' }}
-        />
-        <div className="text-gray-900 text-xl text-center flex items-center mt-10">
-          <FaQuoteLeft className="text-4xl text-gray-300 mr-4" style={{ marginTop: '-1rem' }} />
-          <div>
-            <p className="mb-4">{displayedText}</p>
-            <p className="font-bold">- {feedbacks[currentFeedback].name}, {feedbacks[currentFeedback].company}</p>
-          </div>
-          <FaQuoteRight className="text-4xl text-gray-300 ml-4" style={{ marginTop: '-1rem' }} />
-        </div>
-      </div>
-      <div className="flex justify-center w-full">
-        <button onClick={handlePrev} className="text-white focus:outline-none rounded">
-          <FaArrowLeft className="text-5xl hover:text-yellow-500 transition-colors duration-300" />
+      <div className="flex items-center justify-center w-full mb-8">
+        <button onClick={handlePrev} className="text-white focus:outline-none rounded mr-6">
+          <RiArrowLeftSLine className="text-6xl hover:text-yellow-500 transition-colors duration-300" />
         </button>
-        <button onClick={handleNext} className="text-white focus:outline-none rounded ml-3">
-          <FaArrowRight className="text-5xl hover:text-yellow-500 transition-colors duration-300" />
+        <div className="bg-white w-2/3 h-72 rounded-lg relative flex flex-col items-center justify-center p-6 transition-transform duration-500 ease-in-out transform">
+          <img
+            src={feedbacks[currentFeedback].image}
+            alt="Client"
+            className="w-24 h-24 rounded-full absolute top-0 transform -translate-y-1/2 transition-all duration-500"
+            style={{ top: '0' }}
+          />
+          <div className="text-gray-900 text-xl text-center flex items-center mt-10">
+            <FaQuoteLeft className="text-4xl text-gray-300 mr-4" style={{ marginTop: '-1rem' }} />
+            <div>
+              {displayedText !== undefined && displayedText !== '' && ( // Condition to check if displayedText is defined and not empty
+                <p className="mb-4">{displayedText}</p>
+              )}
+              <p className="font-bold">- {feedbacks[currentFeedback].name}, {feedbacks[currentFeedback].company}</p>
+            </div>
+            <FaQuoteRight className="text-4xl text-gray-300 ml-4" style={{ marginTop: '-1rem' }} />
+          </div>
+        </div>
+        <button onClick={handleNext} className="text-white focus:outline-none rounded ml-6">
+          <RiArrowRightSLine className="text-6xl hover:text-yellow-500 transition-colors duration-300" />
         </button>
       </div>
     </div>
@@ -89,6 +92,14 @@ function Feedback() {
 }
 
 export default Feedback;
+
+
+
+
+
+
+
+
 
 
 

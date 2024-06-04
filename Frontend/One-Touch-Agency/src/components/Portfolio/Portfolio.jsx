@@ -25,10 +25,10 @@ const Portfolio = () => {
     <div className="bg-gray-900">
       <div>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="sm:text-5xl text-2xl font-medium title-font mb-0 text-white flex justify-center pt-12">
+          <h1 className="sm:text-5xl text-2xl font-medium title-font mb-0 text-white flex justify-center pt-32" style={{ fontFamily: 'Chivo, sans-serif' }}>
             Our Portfolio
           </h1>
-          <h2 className="text-white mb-2 text-4xl mt-3 font-semibold">
+          <h2 className="text-white mb-2 text-4xl mt-3 font-semibold" style={{ fontFamily: 'Chivo, sans-serif' }}>
             Browse Our <span className="text-yellow-500">Successful Events</span>
           </h2>
         </div>
@@ -75,17 +75,20 @@ const Portfolio = () => {
       </div>
       {/* Button Container */}
       <div className="flex justify-end pr-8 pb-8 mr-32">
-  <button 
-    onClick={handleButtonClick} 
-    className="ml-36 md:ml-40 lg:ml-80 border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 mt-8 mb-5 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]">
-    Check Out More
-  </button>
-  </div>
+        <button 
+          onClick={handleButtonClick} 
+          className="ml-36 md:ml-40 lg:ml-80 border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 mt-8 mb-5 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
+          style={{ fontFamily: 'Chivo, sans-serif' }}
+        >
+          Check Out More
+        </button>
+      </div>
     </div>
   );
 };
 
 export default Portfolio;
+
 
 
 

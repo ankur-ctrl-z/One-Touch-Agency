@@ -34,10 +34,10 @@ const NavBar = () => {
         </div>
 
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-2xl justify-center">
-          <a href="#home" className={`nav-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`}>Home</a>
-          <a href="#about" className={`nav-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`}>About Us</a>
-          <a href="#services" className={`nav-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`}>Services</a>
-          <a href="#portfolio" className={`nav-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`}>Portfolio</a>
+          <a href="#home" className={`nav-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'Adamina, serif' }}>Home</a>
+          <a href="#about" className={`nav-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'Adamina, serif' }}>About Us</a>
+          <a href="#services" className={`nav-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'Adamina, serif' }}>Services</a>
+          <a href="#portfolio" className={`nav-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'Adamina, serif' }}>Portfolio</a>
         </nav>
 
         <div className="flex items-center gap-1">
@@ -50,7 +50,7 @@ const NavBar = () => {
           <a href="https://www.facebook.com/p/Onetouch-agency-100076203769169/" target="_blank" rel="noopener noreferrer" className={`social-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`}>
             <FaFacebook className="text-3xl transition-colors duration-300 hover:text-blue-500" />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer" className={`social-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`}>
+          <a href="https://x.com/onetouchagency3" target="_blank" rel="noopener noreferrer" className={`social-link mx-2 ${scrolled ? 'text-white' : 'text-black'}`}>
             <FaTwitter className="text-3xl transition-colors duration-300 hover:text-blue-600" />
           </a>
         </div>
@@ -60,6 +60,7 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 
 
 

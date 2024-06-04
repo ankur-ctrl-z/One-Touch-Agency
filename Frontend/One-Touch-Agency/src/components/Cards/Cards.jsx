@@ -10,7 +10,7 @@ const Cards = () => {
   }, [isVisible]);
 
   return (
-    <div className="text-gray-500 body-font bg-gray-900 relative overflow-hidden">
+    <div className="text-gray-500 body-font bg-gray-900 relative overflow-hidden" style={{ fontFamily: 'Adamina, serif' }}>
       <div className="absolute left-0 top-0 w-96 h-96 bg-yellow-500 rounded-full animate-move"></div>
       <div className="absolute right-0 bottom-0 w-96 h-96 bg-yellow-500 rounded-full animate-move-reverse"></div>
 
@@ -111,6 +111,7 @@ const Cards = () => {
 };
 
 export default Cards;
+
 
 
 

@@ -60,7 +60,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="text-gray-600 body-font relative bg-gray-900">
+    <div className="text-gray-600 body-font relative bg-gray-900 -mt-12">
       <hr className="ml-36" style={{ border: '0.5px solid yellow', width: '81%' }} />
       <h1 className="text-5xl font-medium flex justify-center text-white mt-8">Contact Us</h1>
       <div className="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -134,7 +134,7 @@ const ContactForm = () => {
           </button>
           {/* Highlighted Line */}
           <div style={{ minHeight: '1.5rem' }}>
-            {error && <p className="text-red-600">{error}</p>}
+            {error && <p className="text-red-600 ml-6">{error}</p>}
           </div>
         </div>
       </div>
