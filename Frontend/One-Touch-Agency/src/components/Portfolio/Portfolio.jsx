@@ -25,7 +25,7 @@ const Portfolio = () => {
     <div className="bg-gray-900">
       <div>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="sm:text-5xl text-2xl font-medium title-font mb-0 text-white flex justify-center pt-32" style={{ fontFamily: 'Chivo, sans-serif' }}>
+          <h1 className="sm:text-5xl text-2xl font-medium title-font mb-0 text-white flex justify-center pt-24" style={{ fontFamily: 'Chivo, sans-serif' }}>
             Our Portfolio
           </h1>
           <h2 className="text-white mb-2 text-4xl mt-3 font-semibold" style={{ fontFamily: 'Chivo, sans-serif' }}>

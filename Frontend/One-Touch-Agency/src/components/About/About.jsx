@@ -62,7 +62,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <hr className="ml-40 mt-16" style={{ border: '0.5px solid yellow', width: '81%',}} />
+      <hr className="ml-40 mt-36" style={{ border: '0.5px solid yellow', width: '81%',}} />
     </div>
   );
 };

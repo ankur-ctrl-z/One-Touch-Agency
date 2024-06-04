@@ -58,14 +58,14 @@ function Feedback() {
 
   return (
     <div className="bg-gray-900 min-h-screen flex flex-col items-center justify-center relative">
-      <div className="text-5xl font-medium text-white mb-16">
-        <h1>What Our Client Says</h1>
+      <div className="text-5xl font-medium text-white mb-32 mt-0">
+        <h1 style={{ fontFamily: 'Chivo, sans-serif' }}>What Our Client Says</h1>
       </div>
       <div className="flex items-center justify-center w-full mb-8">
         <button onClick={handlePrev} className="text-white focus:outline-none rounded mr-6">
           <RiArrowLeftSLine className="text-6xl hover:text-yellow-500 transition-colors duration-300" />
         </button>
-        <div className="bg-white w-2/3 h-72 rounded-lg relative flex flex-col items-center justify-center p-6 transition-transform duration-500 ease-in-out transform">
+        <div className="bg-white -mt-10 w-2/3 h-72 rounded-lg relative flex flex-col items-center justify-center p-6 transition-transform duration-500 ease-in-out transform">
           <img
             src={feedbacks[currentFeedback].image}
             alt="Client"
@@ -75,7 +75,7 @@ function Feedback() {
           <div className="text-gray-900 text-xl text-center flex items-center mt-10">
             <FaQuoteLeft className="text-4xl text-gray-300 mr-4" style={{ marginTop: '-1rem' }} />
             <div>
-              {displayedText !== undefined && displayedText !== '' && ( // Condition to check if displayedText is defined and not empty
+              {displayedText !== undefined && displayedText !== '' && (
                 <p className="mb-4">{displayedText}</p>
               )}
               <p className="font-bold">- {feedbacks[currentFeedback].name}, {feedbacks[currentFeedback].company}</p>
@@ -92,6 +92,7 @@ function Feedback() {
 }
 
 export default Feedback;
+
 
 
 
