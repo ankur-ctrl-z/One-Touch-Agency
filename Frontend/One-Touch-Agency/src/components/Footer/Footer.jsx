@@ -13,7 +13,7 @@ const Footer = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, message, service }), // Include message and service fields
+        body: JSON.stringify({ email, message, service }),
       });
 
       if (!response.ok) {
@@ -28,12 +28,11 @@ const Footer = () => {
   };
 
   return (
-    <div className="body-font bg-gray-900 relative">
+    <div className="body-font bg-gray-900 relative" style={{ fontFamily: 'Adamina, serif' }}>
       <div className="container px-5 py-4 mx-auto">
-        {/* Break Line */}
         <hr style={{ border: '0.5px solid yellow', width: '100%' }} />
         <div className="w-full flex flex-col items-center">
-          <h1 className="title-font text-3xl text-white tracking-widest mb-3 mt-5 font-bold">
+          <h1 className="title-font text-3xl text-white tracking-widest mb-3 mt-5 font-bold" style={{ fontFamily: 'Chivo, sans-serif' }}>
             GET THE LATEST UPDATES
           </h1>
         </div>
@@ -52,7 +51,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-wrap md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4 -mt-48">
-            <h1 className="text-white text-3xl font-bold -mt-28">One Touch Agency</h1>
+            <h1 className="text-white text-3xl font-bold -mt-28" style={{ fontFamily: 'Chivo, sans-serif' }}>One Touch Agency</h1>
             <nav className="list-none mb-8 text-white text-2xl mt-8 space-y-2">
               <li>
                 <a className="text-white hover:text-yellow-300" href="#home">Home</a>
@@ -80,7 +79,6 @@ const Footer = () => {
               <a href="https://x.com/onetouchagency3" target="_blank" rel="noopener noreferrer">
                 <FaTwitter className="text-3xl mx-2 hover:text-blue-600" />
               </a>
-
             </div>
           </div>
           <div className="w-full px-4 mt-10 flex flex-col items-center">
@@ -117,6 +115,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 
 

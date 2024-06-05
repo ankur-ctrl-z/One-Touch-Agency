@@ -1,8 +1,8 @@
 import { Link } from 'react-scroll';
-import image1 from '../../assets/Clients images/air-asia.png';
-import image2 from '../../assets/Clients images/Tata_Chemicals_Limited_-_Logo.svg.png';
-import image3 from '../../assets/Clients images/fb.png';
-import image4 from '../../assets/Clients images/matrix battery.png';
+import image1 from '../../assets/Clients images/bhoomi logo.png';
+import image2 from '../../assets/Clients images/chara.png';
+import image3 from '../../assets/Clients images/tata nq.png';
+import image4 from '../../assets/Clients images/vecmocon.png';
 
 function Clients() {
   return (
@@ -32,7 +32,7 @@ function Clients() {
           Be The Next
         </Link>
       </div>
-      <hr className="ml-36 mt-10 mb-0" style={{ border: '0.5px solid yellow', width: '81%' }} />
+      <hr className="ml-36 mt-24 mb-0" style={{ border: '0.5px solid yellow', width: '81%' }} />
     </div>
   );
 }

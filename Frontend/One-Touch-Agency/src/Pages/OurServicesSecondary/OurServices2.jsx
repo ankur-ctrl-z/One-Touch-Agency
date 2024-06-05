@@ -67,35 +67,37 @@ function OurServices2() {
     <div className="bg-gray-900 w-full min-h-screen">
       <NavBar />
       {navBarRendered && (
-        <div className="pt-28"> {/* Add padding-top to push content below navbar */}
-          <h1 className="text-white text-3xl flex justify-center font-bold">Our Services</h1>
-          <h1 className="text-6xl text-white flex justify-center text-center mt-5">
+        <div className="pt-28">
+          <h1 className="text-3xl flex justify-center text-yellow-300 font-bold" style={{ fontFamily: 'Adamina, serif' }}>Our Services</h1>
+          <h1 className="text-5xl text-white flex justify-center text-center mt-5" style={{ fontFamily: 'Chivo, sans-serif' }}>
             Tailoring Strategies to Ignite Action
           </h1>
-          <h1 className="text-6xl text-white flex justify-center text-center mt-5">
-            for Your <span className="text-[#fcb900] px-2">Brand</span>
+          <h1 className="text-5xl text-white flex justify-center text-center mt-5" style={{ fontFamily: 'Chivo, sans-serif' }}>
+             <span className="text-[#fcb900] px-2">for Your Brand</span>
           </h1>
 
-          <div className={`bg-gray-900 w-full flex flex-wrap justify-center gap-10 mt-10 ${viewMore ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} grid grid-cols-1 md:grid-cols-2`}>
+          <div className={`bg-gray-900 w-full flex-wrap justify-center gap-10 mt-10 grid ${viewMore ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} grid-cols-1 md:grid-cols-2`}>
             {services.slice(0, viewMore ? services.length : 9).map((service, index) => (
-              <div key={index} className='w-[21rem] h-[22rem] border border-yellow-300 rounded-xl overflow-hidden'>
+              <div key={index} className='w-[21rem] h-[22rem] border border-yellow-300 rounded-xl overflow-hidden m-4'>
                 <img className='w-full h-full object-cover' src={service.image} alt={service.name} />
                 <div className='py-4 px-8 bg-white -mt-16 blur-[0.5px] rounded-lg shadow-lg hover:shadow-2xl'>
-                  <h2 className='text-black text-center text-3xl font-bold hover:cursor-pointer'>{service.name}</h2>
+                  <h2 className='text-black text-center text-3xl font-bold hover:cursor-pointer' style={{ fontFamily: 'Adamina, serif' }}>{service.name}</h2>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="flex justify-center gap-5 mt-8">
+          <div className="flex justify-center mt-12">
             <button 
               onClick={handleMore} 
-              className="border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]">
+              className="border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
+              style={{ fontFamily: 'Adamina, serif' }}>
               {viewMore ? "Show Less" : "Show More"}
             </button>
             <button 
               onClick={handleBookNow} 
-              className="border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]">
+              className="border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
+              style={{ fontFamily: 'Adamina, serif' }}>
               Book Now
             </button>
           </div>
@@ -108,6 +110,10 @@ function OurServices2() {
 }
 
 export default OurServices2;
+
+
+
+
 
 
 

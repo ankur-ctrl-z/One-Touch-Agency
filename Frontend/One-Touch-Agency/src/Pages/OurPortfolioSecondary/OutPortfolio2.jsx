@@ -1,5 +1,5 @@
 import Footer from "../../components/Footer/Footer";
-import NavBar from "../OurServicesSecondary/NavBar";
+import NavBar from "../OurPortfolioSecondary/NavBar";
 import tatac from "../OurPortfolioSecondary/PortfolioImages/11.jpg";
 import chara from "../OurPortfolioSecondary/PortfolioImages/12.jpg";
 import photoShoot from "../OurPortfolioSecondary/PortfolioImages/13.jpg";

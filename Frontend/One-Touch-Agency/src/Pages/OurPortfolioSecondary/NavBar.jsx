@@ -11,16 +11,16 @@ const NavBar = () => {
         </div>
 
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-2xl justify-center">
-          <Link to="/" className="nav-link mx-2 text-white">
+          <Link to="/" className="nav-link mx-2 text-white hover:text-yellow-300" style={{ fontFamily: 'Adamina, serif' }}>
             Home
           </Link>
-          <Link to="/#about" className="nav-link mx-2 text-white">
+          <Link to="/#about" className="nav-link mx-2 hover:text-yellow-300 text-white" style={{ fontFamily: 'Adamina, serif' }}>
             About Us
           </Link>
-          <Link to="/#services" className="nav-link mx-2 text-white">
+          <Link to="/#services" className="nav-link mx-2 hover:text-yellow-300 text-white" style={{ fontFamily: 'Adamina, serif' }}>
             Services
           </Link>
-          <Link to="/#portfolio" className="nav-link mx-2 text-white">
+          <Link to="/#portfolio" className="nav-link mx-2 hover:text-yellow-300 text-white" style={{ fontFamily: 'Adamina, serif' }}>
             Portfolio
           </Link>
         </nav>
@@ -45,3 +45,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

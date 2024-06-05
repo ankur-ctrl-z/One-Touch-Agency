@@ -60,9 +60,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="text-gray-600 body-font relative bg-gray-900 -mt-12">
+    <div className="text-gray-600 body-font relative bg-gray-900 -mt-12" style={{ fontFamily: 'Adamina, serif' }}>
       <hr className="ml-36" style={{ border: '0.5px solid yellow', width: '81%' }} />
-      <h1 className="text-5xl font-medium flex justify-center text-white mt-8">Contact Us</h1>
+      <h1 className="text-5xl font-medium flex justify-center text-white mt-8" style={{ fontFamily: 'Chivo, sans-serif' }}>Contact Us</h1>
       <div className="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
@@ -79,16 +79,16 @@ const ContactForm = () => {
           ></iframe>
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-              <p className="mt-1 font-bold">MUMBAI</p>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-lg">ADDRESS</h2>
+              <p className="mt-1 font-bold text-lg">MUMBAI</p>
               <br />
-              <span className="-mt-2">147-E, 1st Floor, Panchratna Building, Opera House, Mumbai-400004</span>
+              <span className="-mt-2 text-lg">147-E, 1st Floor, Panchratna Building, Opera House, Mumbai-400004</span>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-              <a className="text-indigo-500 leading-relaxed">contact@onetouchagency.com</a>
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-              <p className="leading-relaxed">+91 7021377482</p>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-lg">EMAIL</h2>
+              <a className="text-indigo-500 leading-relaxed text-lg">contact@onetouchagency.com</a>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-lg mt-4">PHONE</h2>
+              <p className="leading-relaxed text-lg">+91 7021377482</p>
             </div>
           </div>
         </div>
@@ -143,6 +143,7 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
 
 
 

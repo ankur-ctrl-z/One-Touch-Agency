@@ -72,7 +72,7 @@ function Feedback() {
             className="w-24 h-24 rounded-full absolute top-0 transform -translate-y-1/2 transition-all duration-500"
             style={{ top: '0' }}
           />
-          <div className="text-gray-900 text-xl text-center flex items-center mt-10">
+          <div className="text-gray-900 text-xl text-center flex items-center mt-10" style={{ fontFamily: 'Adamina, serif' }}>
             <FaQuoteLeft className="text-4xl text-gray-300 mr-4" style={{ marginTop: '-1rem' }} />
             <div>
               {displayedText !== undefined && displayedText !== '' && (
@@ -92,6 +92,7 @@ function Feedback() {
 }
 
 export default Feedback;
+
 
 
 
