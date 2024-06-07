@@ -60,7 +60,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="text-gray-600 body-font relative bg-gray-900 -mt-12" style={{ fontFamily: 'Adamina, serif' }}>
+    <div className="text-gray-600 body-font relative bg-gray-900 -mt-12" style={{ fontFamily: 'Adamina, serif' }} id='contact'>
       <hr className="ml-36" style={{ border: '0.5px solid yellow', width: '81%' }} />
       <h1 className="text-5xl font-medium flex justify-center text-white mt-8" style={{ fontFamily: 'Chivo, sans-serif' }}>Contact Us</h1>
       <div className="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">

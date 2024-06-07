@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 import NavBar from '../OurServicesSecondary/NavBar';
 import Footer from "../../components/Footer/Footer";
 import CorporateEvents from "./ServicesImages/Award Ceremony (Corporate Events).jpg";
@@ -26,7 +26,6 @@ import politicalRoadShow from "./ServicesImages/Political Road show Exhibition.j
 function OurServices2() {
   const [viewMore, setViewMore] = useState(false);
   const [navBarRendered, setNavBarRendered] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     setNavBarRendered(true);
@@ -34,10 +33,6 @@ function OurServices2() {
 
   const handleMore = () => {
     setViewMore(!viewMore);
-  };
-
-  const handleBookNow = () => {
-    navigate('/contact');
   };
 
   const services = [
@@ -76,9 +71,9 @@ function OurServices2() {
              <span className="text-[#fcb900] px-2">for Your Brand</span>
           </h1>
 
-          <div className={`bg-gray-900 w-full flex-wrap justify-center gap-10 mt-10 grid ${viewMore ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} grid-cols-1 md:grid-cols-2`}>
+          <div className={`bg-gray-900 w-full flex-wrap justify-center gap-8 mt-10 grid ${viewMore ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} grid-cols-1 md:grid-cols-2`}>
             {services.slice(0, viewMore ? services.length : 9).map((service, index) => (
-              <div key={index} className='w-[21rem] h-[22rem] border border-yellow-300 rounded-xl overflow-hidden m-4'>
+              <div key={index} className='w-[21rem] h-[22rem] border border-yellow-300 rounded-xl overflow-hidden mx-2 my-4'>
                 <img className='w-full h-full object-cover' src={service.image} alt={service.name} />
                 <div className='py-4 px-8 bg-white -mt-16 blur-[0.5px] rounded-lg shadow-lg hover:shadow-2xl'>
                   <h2 className='text-black text-center text-3xl font-bold hover:cursor-pointer' style={{ fontFamily: 'Adamina, serif' }}>{service.name}</h2>
@@ -87,19 +82,21 @@ function OurServices2() {
             ))}
           </div>
 
-          <div className="flex justify-center mt-12">
+          <div className="flex justify-center mt-16 pl-8 gap-4 mb-12">
             <button 
               onClick={handleMore} 
               className="border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
               style={{ fontFamily: 'Adamina, serif' }}>
               {viewMore ? "Show Less" : "Show More"}
             </button>
-            <button 
-              onClick={handleBookNow} 
+            <Link 
+              to="contact" 
+              smooth={true} 
+              duration={500} 
               className="border-[3px] border-white text-white text-xl flex justify-center py-3 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
               style={{ fontFamily: 'Adamina, serif' }}>
               Book Now
-            </button>
+            </Link>
           </div>
         </div>
       )}
@@ -110,6 +107,13 @@ function OurServices2() {
 }
 
 export default OurServices2;
+
+
+
+
+
+
+
 
 
 

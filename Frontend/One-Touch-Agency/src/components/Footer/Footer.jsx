@@ -16,11 +16,13 @@ const Footer = () => {
         body: JSON.stringify({ email, message, service }),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to subscribe');
+      if (response.ok) {
+        alert('Subscribed successfully!');
+      } else {
+        const responseData = await response.json();
+        console.error('Response data:', responseData);
+        alert('Subscription failed.');
       }
-
-      alert('Subscribed successfully!');
     } catch (error) {
       console.error('Error:', error);
       alert('Subscription failed.');
@@ -91,7 +93,7 @@ const Footer = () => {
                   name="footer-field"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-80 sm:w-96 bg-black bg-opacity-50 rounded border border-yellow-400 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-yellow-500 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-80 sm:w-96 bg-gray-900 bg-opacity-50 rounded border border-yellow-400 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-yellow-500 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
               <button
@@ -115,6 +117,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 
 
