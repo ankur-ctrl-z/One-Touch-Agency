@@ -20,19 +20,19 @@ function OurPortfolio2() {
     navigate('/')
   }
   return (
-    <div className="w-full min-h-screen   bg-gray-900 pt-28">
+    <div className="w-full min-h-screen  bg-gray-900 pt-28">
       {/* container */}
       <div className="lg:ml-24 mt-10">
         {/* First Row */}
         <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-          <div className="first w-full md:w-[20rem] lg:w-[40rem] h-[18rem] transition-transform duration-500 hover:-translate-y-2 border border-yellow-500 rounded-3xl p-1 mb-4 lg:mb-0">
+          <div className="first w-full sm:w-[20rem] lg:w-[40rem] h-[18rem] transition-transform duration-500 hover:-translate-y-2 border border-yellow-500 rounded-3xl p-1 mb-4 lg:mb-0">
             <img
               className="w-full h-full object-cover rounded-3xl"
               src={tatac}
               alt=""
             />
           </div>
-          <div className="second w-full md:w-[19rem] transition-transform duration-500 hover:-translate-y-2 lg:w-[20rem] h-[18rem] lg:h-[24rem] border border-yellow-500 rounded-3xl ml-0 lg:ml-7 p-1 mb-4 lg:mb-0">
+          <div className="second w-full sm:w-[19rem] transition-transform duration-500 hover:-translate-y-2 lg:w-[20rem] h-[18rem] lg:h-[24rem] border border-yellow-500 rounded-3xl ml-0 lg:ml-7 p-1 mb-4 lg:mb-0">
             <img
               className="w-full h-full object-cover rounded-3xl"
               src={Bhanderi}

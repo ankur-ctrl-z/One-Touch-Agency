@@ -18,7 +18,7 @@ const Portfolio = () => {
   };
 
   const handleButtonClick = () => {
-    navigate('/our-portfolio-2');
+    navigate('/portfolio2');
   };
 
   return (
@@ -95,9 +95,9 @@ const Portfolio = () => {
       </div>
 
     
-      <div className=" flex justify-center mt-4 lg:mt-[5.5rem] md:mt-3">
+      <div className=" flex justify-center mt-4 md:mt-[4rem]">
         <div
-          className={`four w-full ml-2 mr-2 md:w-[45.8vw] md:-mt-[26vw] md:h-[24.7vw] md:ml-[42vw] lg:ml-[31vw] lg:h-[20.4vw] lg:w-[45vw] border
+          className={`four w-full ml-2 mr-2 md:w-[45.8vw] md:-mt-[11.7rem] md:h-[24.7vw] md:ml-[46.8vw] lg:ml-[43vw] lg:-mt-[20rem] lg:h-[20vw] lg:w-[45vw] border
        border-yellow-500 rounded-md overflow-hidden
         transition-transform duration-500 ${
           isHovered ? "hover:-translate-y-2 hover:shadow-lg" : ""

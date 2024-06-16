@@ -7,7 +7,7 @@ const About = () => {
   const navigate = useNavigate();
 
   const handleViewAllClick = () => {
-    navigate("/our-services-2");
+    navigate("/services2");
   };
 
   return (
@@ -63,7 +63,7 @@ const About = () => {
                 color: "white",
               }}
             >
-              Manager
+              Co-Founder
             </h1>
             <img
               alt="manager"

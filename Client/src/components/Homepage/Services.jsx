@@ -15,14 +15,14 @@ const Services = () => {
 
   return (
  
-    <div className="text-gray-400 body-font lg:mt-5 bg-gray-900">
-      <div className="container px-5 py-24 mx-auto -mt-12">
+    <div className="text-gray-400 body-font mt-2 bg-gray-900">
+      <div className="container px-5 py-9 mx-auto -mt-12">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-          <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white" style={{ fontFamily: 'Chivo, sans-serif' }}>
+          <h1 className="sm:text-5xl text-2xl mt-10 font-medium title-font mb-2 text-white" style={{ fontFamily: 'Chivo, sans-serif' }}>
             Our Services
           </h1>
         </div>
-        <div className="flex flex-wrap -mt-10 sm:-mt-10 -m-4">
+        <div className="flex flex-wrap -mt-20  -m-4">
           <div className="xl:w-1/3 md:w-1/2 w-full p-4">
             <div className="h-56 flex flex-col justify-center items-center">
               <p className="lg:leading-snug text-opacity-80 text-4xl pt-4 md:mt-36 text-center font-bold text-yellow-300" style={{ fontFamily: 'Adamina, serif' }}>
@@ -33,7 +33,7 @@ const Services = () => {
                 <span className="text-yellow-300">unforgettable events.</span>
               </p>
 
-              <Link to={'/our-services-2'}>
+              <Link to={'/services2'}>
               <div
                  style={{ fontFamily: 'Adamina, serif' }}
                 className="mt-4 ml-2 md:ml-6 lg:ml-6 flex-shrink-0 border-[3px] border-white py-2 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
@@ -77,6 +77,7 @@ const Services = () => {
                 >
                   {service.title}
                 </h2>
+                
               </div>
             </div>
           ))}

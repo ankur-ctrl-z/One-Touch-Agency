@@ -55,10 +55,9 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/aboutus" element={<About />} />
+        <Route path="/services2" element={<OurServices2 />} />
+        <Route path="/portfolio2" element={<OurPortfolio2 />} />
         <Route path="/contactus" element={<ContactForm />} />
-        <Route path="/our-portfolio-2" element={<OurPortfolio2 />} />
-        <Route path="/our-services-2" element={<OurServices2 />} />
 
         {/* sub services */}
         <Route path="/services/ai-vr-technology" element={<AIVRTechnology />} />

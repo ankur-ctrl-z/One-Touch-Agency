@@ -93,7 +93,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 rounded-lg">
-          <h1 className="text-gray-900 text-2xl mb-2 font-bold title-font pl-5 mt-5 md:-mt-3 ml-5">
+          <h1 style={{ fontFamily: "Chivo, sans-serif" }} className="text-gray-900 text-2xl mb-2 font-bold title-font pl-5 mt-5 md:-mt-3 ">
             GET IN TOUCH
           </h1>
           <form onSubmit={handleSubmit}>

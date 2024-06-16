@@ -149,7 +149,7 @@ function OurServices2() {
               .map((service, index) => (
                 <div
                   key={index}
-                  className="items-center md:ml-2 md:h-[18rem] border transition-transform duration-700 hover:scale-105 border-yellow-300 rounded-xl overflow-hidden mx-2 my-4"
+                  className="items-center md:ml-5 md:mr-5 md:h-[18rem] border transition-transform duration-700 hover:scale-105 border-yellow-300 rounded-xl overflow-hidden mx-2 my-4"
                   onClick={() => handleServiceClick(service.path)}
                 >
                   <img
@@ -157,13 +157,12 @@ function OurServices2() {
                     src={service.image}
                     alt={service.name}
                   />
-                  <div className="h-24 px-8 bg-white -mt-16 blur-[0.5px] rounded-lg shadow-lg hover:shadow-2xl">
-                    <h2
-                      className=" text-black mb-2 text-center text-3xl font-bold hover:cursor-pointer"
-                      style={{ fontFamily: "Adamina, serif" }}
-                    >
-                      {service.name}
-                    </h2>
+                  <div className="blur-[0.5px] capitalize mt-14 rounded-lg shadow-lg hover:shadow-2xl">
+                  <h2
+                  className="md:text-2xl  text-yellow-300 font-medium title-font absolute bottom-0 left-0 mb-2 ml-4 transition-all duration-300 transform -translate-y-20" 
+                >
+                  {service.name}
+                </h2>
                   </div>
                 </div>
               ))}

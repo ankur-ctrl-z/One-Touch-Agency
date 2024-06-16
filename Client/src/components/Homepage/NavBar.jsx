@@ -47,7 +47,7 @@ const NavBar = () => {
           />
         </div>
 
-        <nav className="hidden md:block sm:mt-10 lg:mr-10 sm:ml-auto sm:mr-auto items-center text-xl md:text-2xl justify-center">
+        <nav className="hidden md:block sm:mt-7 lg:mr-10 sm:ml-auto sm:mr-auto items-center text-xl md:text-2xl justify-center">
           <a
             href="/"
             className={`nav-link mx-2 lg:mx-4 ${
@@ -57,36 +57,39 @@ const NavBar = () => {
           >
             Home
           </a>
-          <a
-            href="/"
-            className={`nav-link mx-2 lg:mx-4 ${
+          
+          <Link to={'/contactus'}
+          className={`nav-link mx-2 lg:mx-4 ${
               scrolled ? "text-white" : "text-white"
             }`}
             style={{ fontFamily: "Adamina, serif" }}
           >
-            About Us
-          </a>
+            Contact Us
+          </Link>
+
           <Link
             className={`nav-link mx-2 lg:mx-4 ${
               scrolled ? "text-white" : "text-white"
             }`}
             style={{ fontFamily: "Adamina, serif" }}
-            to={"/our-services-2"}
+            to={"/services2"}
           >
             Services
           </Link>
+
           <Link
             className={`nav-link mx-2 lg:mx-4 ${
               scrolled ? "text-white" : "text-white"
             }`}
             style={{ fontFamily: "Adamina, serif" }}
-            to={"/our-portfolio-2"}
+            to={"/portfolio2"}
           >
             Portfolio
           </Link>
+
         </nav>
 
-        <div className="social hidden md:flex gap-1 sm:mt-10 sm:ml-auto lg:mr-10 sm:mr-auto text-white ">
+        <div className="hidden md:flex gap-1 sm:mt-7 sm:ml-auto lg:mr-10 sm:mr-auto text-white ">
           <a
             href="https://www.instagram.com/onetouchagency_/"
             target="_blank"
