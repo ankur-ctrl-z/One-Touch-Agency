@@ -48,6 +48,7 @@ function App() {
             };
           }, []);
   return (
+    
     <Router>
       <div className="cursor h-[1rem] w-[1rem] rounded-full absolute z-[9999] top-[2%] left-[0%] -translate-x-1/2 -translate-y-1/2 bg-[#FCB900]"></div>
       <NavBar />
