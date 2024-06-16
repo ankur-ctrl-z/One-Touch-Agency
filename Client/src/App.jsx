@@ -9,7 +9,6 @@ import OurPortfolio2 from "./Pages/OurPortfolioSecondary/OurPortfolio2";
 import HomePage from "./components/Homepage/Homepage";
 import OurServices2 from "./Pages/OurServicesSecondary/OurServices2";
 import ContactForm from "./components/Homepage/ContactForm";
-import About from "./components/Homepage/About";
 import AIVRTechnology from "./components/All-Services/AIVRTechnology";
 import AppreciationCeremony from "./components/All-Services/AppreciationCeremony";
 import AwardCeremony from "./components/All-Services/AwardCeremony";
