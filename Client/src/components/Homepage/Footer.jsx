@@ -1,39 +1,39 @@
 import { useState } from 'react';
 import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [subscribeError, setSubscribeError] = useState("");
-  const [subscribeSuccess, setSubscribeSuccess] = useState("");
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [service, setService] = useState('');
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubscribe = async (e) => {
-    e.preventDefault();
-
+  const handleSubscribe = async () => {
     try {
-      await axios.post("http://localhost:3000/subscribe", { email });
-      setSubscribeSuccess("Email subscribed successfully!");
-      setSubscribeError("");
-      setEmail("");
-    } catch (error) {
-      if (error.response && error.response.data && error.response.data.error) {
-        setSubscribeError(error.response.data.error);
-      } else {
-        setSubscribeError("Something went wrong. Please try again later.");
+      const response = await fetch('http://localhost:3001/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, message, service }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to subscribe');
       }
-      setSubscribeSuccess("");
+
+      alert('Subscribed successfully!');
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Subscription failed.');
     }
   };
 
   return (
     <div className="w-full bg-gray-900 relative" style={{ fontFamily: 'Adamina, serif' }}>
       <div className="container px-5 py-4 mx-auto">
+
         {/* Break Line */}
-        <hr className='mt-2' style={{ border: '0.5px solid yellow', width: '100%' }} />
+        <hr className='mt-2' style={{ border: '0.5px solid yellow', width: '100%' }}/>
 
         <div className="w-full flex text-center flex-col">
           <h1 className="title-font text-2xl lg:text-3xl text-white tracking-widest mb-3 mt-5 font-bold" style={{ fontFamily: 'Chivo, sans-serif' }}>
@@ -44,38 +44,44 @@ const Footer = () => {
         <div className="flex items-center gap-20 flex-col md:flex-row md:justify-between lg:gap-40">
           {/* first div */}
           <div className="md:-mt-20 mt-20 mb-5 md:w-1/3">
-            <h1 className="text-white lg:text-3xl text-[22px] font-bold md:mt-24 -mt-16" style={{ fontFamily: 'Chivo, sans-serif' }}>
+            <h1 className="text-white text-[20px] lg:text-3xl font-bold -mt-16 md:mt-24" style={{ fontFamily: 'Chivo, sans-serif' }}>
               One Touch Agency
             </h1>
-            {/* nav */}
-            <nav className="list-none text-center md:text-start mb-8 text-white text-xl lg:text-2xl mt-8 space-y-2">
-              <li>
-                <a className="text-white hover:text-yellow-300" href="#home">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a className="text-white hover:text-yellow-300" href="#about">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-white hover:text-yellow-300"
-                  href="#services"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-white hover:text-yellow-300"
-                  href="#portfolio"
-                >
-                  Portfolio
-                </a>
-              </li>
-            </nav>
+
+
+        {/* nav */} 
+        <nav className='flex flex-col items-center sm:-ml-20 text-2xl py-10 pb-10'>
+        <a
+          href="/"
+         className="text-white"
+         style={{ fontFamily: "Adamina, serif" }}
+        >
+          Home
+        </a>
+
+          <a
+            href="/"
+           className="text-white"
+           style={{ fontFamily: "Adamina, serif" }}
+          >
+            About Us
+          </a>
+
+          <Link
+           className="  text-white"
+           style={{ fontFamily: "Adamina, serif" }}
+            to={"/our-services-2"}
+          >
+            Services
+          </Link>
+          <Link
+           className="text-white"
+           style={{ fontFamily: "Adamina, serif" }}
+            to={"/our-portfolio-2"}
+          >
+            Portfolio
+          </Link>
+        </nav>
 
             {/* social icons */}
             <div className="flex items-center justify-center md:justify-start -ml-2 text-white">
@@ -107,33 +113,25 @@ const Footer = () => {
           </div>
 
           {/* second div */}
-<form onSubmit={handleSubscribe}>
-  <div className="lg:w-1/3 text-center -mt-12 md:text-start">
-    <div className="relative w-full mb-4">
-      <p className="text-xl text-white mb-2">Enter Your Email Address</p>
-      <input
-        value={email}
-        onChange={handleEmailChange}
-        type="email"
-        id="footer-field"
-        name="footer-field"
-        className="w-full lg:w-96 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-white focus:ring-2 focus:ring-yellow-200 focus:border-yellow-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-      />
-    </div>
-    <button className="flex-shrink-0 md:ml-0 md:w-28 text-center inline-flex text-black bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">
-      Subscribe
-    </button>
-    <div className="mt-2 flex justify-center md:justify-start">
-      {subscribeError && <p className="text-red-500 text-center md:text-left">{subscribeError}</p>}
-      {subscribeSuccess && <p className="text-green-500 text-center md:text-left">{subscribeSuccess}</p>}
-    </div>
-  </div>
-</form>
+          <div className="lg:w-1/3 text-center -mt-12 md:text-start ">
+            <div className="relative w-full mb-4">
+              <p className= "text-xl text-white mb-2">Enter Your Email Address</p>
+              <input
+                type="text"
+                id="footer-field"
+                name="footer-field"
+                className="w-full lg:w-96 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-yellow-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
 
+            <button className="flex-shrink-0 md:ml-0 md:w-28 text-center inline-flex text-black bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">
+              Subscribe
+            </button>
+          </div>
 
           {/* third div */}
-          <div className="lg:w-1/3 text-center -mt-8">
-            <div className="flex align-top text-white">
+          <div className="lg:w-1/3 text-center -mt-8 ">
+            <div className="flex align-top  text-white">
               <p className="text-xl lg:text-2xl">
                 <span className="text-3xl lg:text-3xl font-semibold block mb-1 sm:mt-10">Address</span>
                 <br />
@@ -163,14 +161,15 @@ const Footer = () => {
           className="flex justify-center items-center text-white text-sm md:text-lg mt-3"
           style={{ marginBottom: '0', paddingBottom: '0' }}
         >
-          <p>@2024<span className='text-yellow-300'> OneTouch Agency</span> <span>Designed By -</span> <a
+          <p>@2024<span className='text-yellow-300'> OneTouch Agency</span> <span>Designed By -</span>  <a
             href="https://www.unarrow.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-300"
           >
-            <span className='text-yellow-300'>Unarrow Digital Solutions</span>
+           <span className='text-yellow-300'>Unarrow Digital Solutions</span>
           </a></p>
+         
         </div>
       </div>
     </div>
@@ -178,9 +177,6 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
 
 
 

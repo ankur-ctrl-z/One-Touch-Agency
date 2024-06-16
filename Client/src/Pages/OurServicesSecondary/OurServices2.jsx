@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import CorporateEvents from "./ServicesImages/Award Ceremony (Corporate Events).jpg";
 import StallFabrication from "./ServicesImages/Stall Fabrication - Exhibition.jpeg";
@@ -38,69 +38,153 @@ function OurServices2() {
   };
 
   const services = [
-    { name: "Corporate Event", image: CorporateEvents, path: "/services/corporate-event" },
-    { name: "Stall Fabrication", image: StallFabrication, path: "/services/stall-fabrication" },
+    {
+      name: "Corporate Event",
+      image: CorporateEvents,
+      path: "/services/corporate-event",
+    },
+    {
+      name: "Stall Fabrication",
+      image: StallFabrication,
+      path: "/services/stall-fabrication",
+    },
     { name: "MICE", image: mice, path: "/services/mice" },
-    { name: "Appreciation Ceremony", image: awardEvent, path: "/services/appreciation-ceremony" },
+    {
+      name: "Appreciation Ceremony",
+      image: awardEvent,
+      path: "/services/appreciation-ceremony",
+    },
     { name: "Theme Party", image: themeParty, path: "/services/theme-party" },
-    { name: "Award Ceremony", image: celebration, path: "/services/award-ceremony" },
+    {
+      name: "Award Ceremony",
+      image: celebration,
+      path: "/services/award-ceremony",
+    },
     { name: "Gala Dinner", image: gala, path: "/services/gala-dinner" },
     { name: "Security", image: security, path: "/services/security" },
-    { name: "Client Meeting", image: visitor, path: "/services/client-meeting" },
-    { name: "AI VR Technology", image: VRTechnology, path: "/services/ai-vr-technology" },
-    { name: "Brand Exhibitions", image: brand, path: "/services/brand-exhibitions" },
-    { name: "Celebrity Management", image: celebrity, path: "/services/celebrity-management" },
-    { name: "Decor And Styling", image: decorAndStyling, path: "/services/decor-styling" },
-    { name: "Digital Marketing", image: digitalMarketing, path: "/services/digital-marketing" },
-    { name: "Fashion Show", image: fashionShow, path: "/services/fashion-show" },
+    {
+      name: "Client Meeting",
+      image: visitor,
+      path: "/services/client-meeting",
+    },
+    {
+      name: "AI VR Technology",
+      image: VRTechnology,
+      path: "/services/ai-vr-technology",
+    },
+    {
+      name: "Brand Exhibitions",
+      image: brand,
+      path: "/services/brand-exhibitions",
+    },
+    {
+      name: "Celebrity Management",
+      image: celebrity,
+      path: "/services/celebrity-management",
+    },
+    {
+      name: "Decor And Styling",
+      image: decorAndStyling,
+      path: "/services/decor-styling",
+    },
+    {
+      name: "Digital Marketing",
+      image: digitalMarketing,
+      path: "/services/digital-marketing",
+    },
+    {
+      name: "Fashion Show",
+      image: fashionShow,
+      path: "/services/fashion-show",
+    },
     { name: "Road Show", image: roadShow, path: "/services/road-show" },
-    { name: "Product Launch", image: productLaunch, path: "/services/product-launch" },
-    { name: "Political Road Show", image: politicalRoadShow, path: "/services/political-road-show" },
+    {
+      name: "Product Launch",
+      image: productLaunch,
+      path: "/services/product-launch",
+    },
+    {
+      name: "Political Road Show",
+      image: politicalRoadShow,
+      path: "/services/political-road-show",
+    },
     { name: "Trade Show", image: tradeShow, path: "/services/trade-show" },
-    { name: "Venue Sourcing", image: venueSource, path: "/services/venue-sourcing" },
+    {
+      name: "Venue Sourcing",
+      image: venueSource,
+      path: "/services/venue-sourcing",
+    },
   ];
 
   return (
     <div className="bg-gray-900 w-full min-h-screen">
-    
       {navBarRendered && (
         <div className="pt-28 ">
-          <h1 className="text-3xl flex justify-center text-yellow-300 font-bold" style={{ fontFamily: 'Adamina, serif' }}>Our Services</h1>
-          <h1 className="text-5xl text-white flex justify-center text-center mt-5" style={{ fontFamily: 'Chivo, sans-serif' }}>
+          <h1
+            className="text-3xl flex justify-center text-yellow-300 font-bold"
+            style={{ fontFamily: "Adamina, serif" }}
+          >
+            Our Services
+          </h1>
+          <h1
+            className="text-5xl text-white flex justify-center text-center mt-5"
+            style={{ fontFamily: "Chivo, sans-serif" }}
+          >
             Tailoring Strategies to Ignite Action
           </h1>
-          <h1 className="text-5xl text-white flex justify-center text-center mt-5" style={{ fontFamily: 'Chivo, sans-serif' }}>
-             <span className="text-[#fcb900] px-2">for Your Brand</span>
+          <h1
+            className="text-5xl text-white flex justify-center text-center mt-5"
+            style={{ fontFamily: "Chivo, sans-serif" }}
+          >
+            <span className="text-[#fcb900] px-2">for Your Brand</span>
           </h1>
 
-          <div className={`bg-gray-900 w-full flex-wrap justify-center gap-4 sm:gap-4 ml-2 sm:ml-8 grid ${viewMore ? 'lg:grid-cols-4' : 'lg:grid-cols-3 lg:ml-20'} grid-cols-1 md:grid-cols-2`}>
-            {services.slice(0, viewMore ? services.length : 9).map((service, index) => (
-              <div 
-              key={index} 
-              className='flex items-center w-[18rem] h-[20rem] md:w-[20rem] md:h-[22rem] border transition-transform duration-700 hover:scale-105 border-yellow-300 rounded-xl overflow-hidden mx-2 my-4'
-              onClick={() => handleServiceClick(service.path)}
-            >
-              <img className='w-full h-full  object-cover' src={service.image} alt={service.name} />
-              <div className='py-4 px-8 bg-white -mt-16 blur-[0.5px] rounded-lg shadow-lg hover:shadow-2xl'>
-                <h2 className='text-black text-center text-3xl font-bold hover:cursor-pointer' style={{ fontFamily: 'Adamina, serif' }}>{service.name}</h2>
-              </div>
-              </div>
-            ))}
+          <div
+            className={`bg-gray-900 w-full flex-wrap justify-center gap-4 sm:gap-4 grid ${
+              viewMore ? "lg:grid-cols-4" : "lg:grid-cols-3 "
+            } grid-cols-1 md:grid-cols-2`}
+          >
+            {services
+              .slice(0, viewMore ? services.length : 9)
+              .map((service, index) => (
+                <div
+                  key={index}
+                  className="items-center md:ml-2 md:h-[18rem] border transition-transform duration-700 hover:scale-105 border-yellow-300 rounded-xl overflow-hidden mx-2 my-4"
+                  onClick={() => handleServiceClick(service.path)}
+                >
+                  <img
+                    className="w-full h-full object-cover"
+                    src={service.image}
+                    alt={service.name}
+                  />
+                  <div className="h-24 px-8 bg-white -mt-16 blur-[0.5px] rounded-lg shadow-lg hover:shadow-2xl">
+                    <h2
+                      className=" text-black mb-2 text-center text-3xl font-bold hover:cursor-pointer"
+                      style={{ fontFamily: "Adamina, serif" }}
+                    >
+                      {service.name}
+                    </h2>
+                  </div>
+                </div>
+              ))}
           </div>
 
           <div className="flex justify-center mt-16 pl-8 gap-4 ">
-            <button 
-              onClick={handleMore} 
+            <button
+              onClick={handleMore}
               className="border-[3px] mb-5 border-white text-white text-xl flex justify-center py-3 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
-              style={{ fontFamily: 'Adamina, serif' }}>
+              style={{ fontFamily: "Adamina, serif" }}
+            >
               {viewMore ? "Show Less" : "Show More"}
             </button>
-            
-            <Link to="/contactus" 
-              smooth={true} 
-              duration={500} 
+
+            <Link
+              to="/contactus"
+              smooth={true}
+              duration={500}
               className="border-[3px] mb-5 border-white text-white text-xl flex justify-center py-3 px-6 rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625]"
-              style={{ fontFamily: 'Adamina, serif' }}>
+              style={{ fontFamily: "Adamina, serif" }}
+            >
               Book Now
             </Link>
           </div>
