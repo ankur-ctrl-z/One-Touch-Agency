@@ -58,14 +58,7 @@ const NavBar = () => {
             Home
           </a>
           
-          <Link to={'/contactus'}
-          className={`nav-link mx-2 lg:mx-4 ${
-              scrolled ? "text-white" : "text-white"
-            }`}
-            style={{ fontFamily: "Adamina, serif" }}
-          >
-            Contact Us
-          </Link>
+         
 
           <Link
             className={`nav-link mx-2 lg:mx-4 ${
@@ -85,6 +78,14 @@ const NavBar = () => {
             to={"/portfolio2"}
           >
             Portfolio
+          </Link>
+          <Link to={'/contactus'}
+          className={`nav-link mx-2 lg:mx-4 ${
+              scrolled ? "text-white" : "text-white"
+            }`}
+            style={{ fontFamily: "Adamina, serif" }}
+          >
+            Contact Us
           </Link>
 
         </nav>

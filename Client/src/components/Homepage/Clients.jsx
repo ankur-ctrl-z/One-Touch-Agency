@@ -27,7 +27,7 @@ function Clients() {
     <a 
       smooth={true} 
       duration={500} style={{ fontFamily: 'Chivo, sans-serif' }}
-    className='text-white text-xl flex justify-center py-3 px-6 mt-8 mb-10 border-[3px] border-white rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625] focus:outline-none' href="#contact">Be the next</a>
+    className='text-white text-xl flex justify-center py-3 px-6 mt-8 mb-10 border-[3px] border-white rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625] focus:outline-none' href="/contactus">Be the next</a>
   </div>
 </div>
   );

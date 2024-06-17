@@ -42,6 +42,7 @@ const Portfolio = () => {
       </div>
 
       {/* Event Images */}
+
       <div className="flex flex-wrap justify-center mx-2 md:mx-10  mt-8">
         
         <div
@@ -95,10 +96,11 @@ const Portfolio = () => {
       </div>
 
     
-      <div className=" flex justify-center mt-4 md:mt-[4rem]">
+      <div className="flex justify-center mt-4 md:mt-[3.4rem]">
         <div
-          className={`four w-full ml-2 mr-2 md:w-[45.8vw] md:-mt-[11.7rem] md:h-[24.7vw] md:ml-[46.8vw] lg:ml-[43vw] lg:-mt-[20rem] lg:h-[20vw] lg:w-[45vw] border
-       border-yellow-500 rounded-md overflow-hidden
+          className={`
+            w-full ml-2 mr-2 sm:w-[22rem] sm:ml-[20.5rem] md:-mt-[15rem] md:h-[11.5rem] lg:w-[45%] lg:-mt-[22.5rem] lg:ml-[29.5rem] lg:h-[19rem]
+             border border-yellow-500 rounded-md overflow-hidden
         transition-transform duration-500 ${
           isHovered ? "hover:-translate-y-2 hover:shadow-lg" : ""
         }`}
@@ -128,3 +130,5 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+
