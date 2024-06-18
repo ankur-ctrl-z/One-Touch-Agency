@@ -39,39 +39,57 @@ async function checkDuplicateEmail(req, res, next) {
 
 connectDB();
 
-const EMAIL_USER = process.env.EMAIL_USER;
-const EMAIL_PASS = process.env.EMAIL_PASS;
+// const EMAIL_USER = process.env.EMAIL_USER;
+// const EMAIL_PASS = process.env.EMAIL_PASS;
 
-// Configuring Nodemailer
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: EMAIL_USER,
-        pass: EMAIL_PASS
-    }
-});
+// // Configuring Nodemailer
+// const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//         user: EMAIL_USER,
+//         pass: EMAIL_PASS
+//     }
+// });
 
-// Route to handle form submission and save email
+// // Route to handle form submission and save email
+// app.post('/save-email', checkDuplicateEmail, async (req, res) => {
+//     try {
+//         const validatedData = InputSchema.parse(req.body);
+//         const formData = new InputModelOneTouch(validatedData);
+//         await formData.save();
+
+//         const mailOptions = {
+//             from: EMAIL_USER,
+//             to: EMAIL_USER,
+//             subject: 'New Form Submission',
+//             text: `You have a new form submission:\n\nEmail: ${validatedData.email}\nServices: ${validatedData.services}\nMessage: ${validatedData.message}`
+//         };
+
+//         transporter.sendMail(mailOptions, (error, info) => {
+//             if (error) {
+//                 console.error('Error sending email:', error.message);
+//                 return res.status(500).send('Error sending email: ' + error.message);
+//             }
+//             res.status(200).send('Form data saved and email sent successfully.');
+//         });
+//     } catch (error) {
+//         if (error instanceof z.ZodError) {
+//             res.status(400).json({ error: error.errors });
+//         } else {
+//             console.error('Error saving data:', error.message);
+//             res.status(500).send('Error saving data: ' + error.message);
+//         }
+//     }
+// });
+
+
 app.post('/save-email', checkDuplicateEmail, async (req, res) => {
     try {
         const validatedData = InputSchema.parse(req.body);
         const formData = new InputModelOneTouch(validatedData);
         await formData.save();
 
-        const mailOptions = {
-            from: EMAIL_USER,
-            to: EMAIL_USER,
-            subject: 'New Form Submission',
-            text: `You have a new form submission:\n\nEmail: ${validatedData.email}\nServices: ${validatedData.services}\nMessage: ${validatedData.message}`
-        };
-
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.error('Error sending email:', error.message);
-                return res.status(500).send('Error sending email: ' + error.message);
-            }
-            res.status(200).send('Form data saved and email sent successfully.');
-        });
+        res.status(200).send('Form data saved successfully.');
     } catch (error) {
         if (error instanceof z.ZodError) {
             res.status(400).json({ error: error.errors });
