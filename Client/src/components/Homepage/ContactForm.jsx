@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from 'axios';
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -22,11 +23,11 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://www.api.onetouchagency.com/save-email", formData);
+      const response = await axios.post("http://localhost:3000/save-email", formData);
       if (response.status === 200) {
         setSuccess("Form submitted successfully!");
         setError("");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ email: "", services: "", message: "" });
       } else {
         setError("Error submitting form. Please try again.");
         setSuccess("");
@@ -36,18 +37,19 @@ const ContactForm = () => {
       setSuccess("");
     }
   };
+
   return (
     <div
       className="text-gray-600 body-font relative bg-gray-900 -mt-12"
       style={{ fontFamily: "Adamina, serif" }}
     >
       {/* horizontal line */}
-      <div className="w-full -ml-5  md:-ml-6">
-        <hr className="ml-12 " style={{ border: "0.5px solid yellow" }} />
+      <div className="w-full -ml-5 md:-ml-6">
+        <hr className="ml-12" style={{ border: "0.5px solid yellow" }} />
       </div>
 
       <h1
-        className="text-5xl mt-12 font-medium flex justify-center text-white "
+        className="text-5xl mt-12 font-medium flex justify-center text-white"
         style={{ fontFamily: "Chivo, sans-serif" }}
       >
         Contact Us
@@ -93,61 +95,61 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 rounded-lg">
-          <h1 style={{ fontFamily: "Chivo, sans-serif" }} className="text-gray-900 text-2xl mb-2 font-bold title-font pl-5 mt-5 md:-mt-3 ">
+          <h1 className="text-gray-900 text-2xl mb-2 font-bold title-font pl-5 mt-5 md:-mt-3 ml-5">
             GET IN TOUCH
           </h1>
           <form onSubmit={handleSubmit}>
-          <div className="relative mb-4 pl-5 pr-5">
-            <label htmlFor="email" className="leading-7 text-lg text-gray-600">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-          <div className="relative mb-4 pl-5 pr-5">
-            <label
-              htmlFor="service" className="leading-7 text-lg text-gray-600">
-              Services
-            </label>
-            <input
-              type="text"
-              id="services"
-              name="services"
-              value={formData.services}
-              onChange={handleChange}
-              className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-          <div className="relative mb-4 pl-5 pr-5 w-full">
-            <label
-              htmlFor="message" className="leading-7 text-lg text-gray-600 w-full">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="text-white bg-yellow-500 border-0 pl-5 pr-5 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg mr-5 ml-5 overflow-hidden"
-          >
-            Send
-          </button>
+            <div className="relative mb-4 pl-5 pr-5">
+              <label htmlFor="email" className="leading-7 text-lg text-gray-600">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+            <div className="relative mb-4 pl-5 pr-5">
+              <label
+                htmlFor="service" className="leading-7 text-lg text-gray-600">
+                Services
+              </label>
+              <input
+                type="text"
+                id="services"
+                name="services"
+                value={formData.services}
+                onChange={handleChange}
+                className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+            <div className="relative mb-4 pl-5 pr-5 w-full">
+              <label
+                htmlFor="message" className="leading-7 text-lg text-gray-600 w-full">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full bg-white rounded border border-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="text-white bg-yellow-500 border-0 pl-5 pr-5 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg mr-5 ml-5 overflow-hidden"
+            >
+              Send
+            </button>
           </form>
           {/* Highlighted Line */}
           <div style={{ minHeight: "1.5rem" }}>
-          {error && <p className="text-red-500 text-center mt-2">{error}</p>}
-          {success && <p className="text-green-500 text-center mt-4">{success}</p>}
+            {error && <p className="text-red-500 text-center mt-2">{error}</p>}
+            {success && <p className="text-green-500 text-center mt-4">{success}</p>}
           </div>
         </div>
       </div>
