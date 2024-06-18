@@ -9,7 +9,7 @@ const Footer = () => {
 
   const handleSubscribe = async () => {
     try {
-      const response = await fetch("http://localhost:3001/submit", {
+      const response = await fetch("https://www.api.onetouchagency.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
