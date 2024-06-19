@@ -133,7 +133,7 @@ const Footer = () => {
                 type="text"
                 id="footer-field"
                 name="footer-field"
-                className="w-full lg:w-96 bg-gray-800 bg-opacity-50 rounded border-2 border-yellow-300 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-yellow-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full lg:w-96 bg-gray-800 bg-opacity-50 rounded border-2 border-yellow-300 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-yellow-500 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
 
