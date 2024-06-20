@@ -23,7 +23,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://www.api.onetouchagency.com/save-email", formData);
+      const response = await axios.post("http://localhost:3000/save-email", formData);
       if (response.status === 200) {
         setSuccess("Form submitted successfully!");
         setError("");
