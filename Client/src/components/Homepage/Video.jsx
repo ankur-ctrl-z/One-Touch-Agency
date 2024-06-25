@@ -39,9 +39,9 @@ const Video = () => {
                 onPause={() => setIsPlaying(false)}
             />
             <div className="controls-overlay ">
-                <button onClick={handlePlayPause} className="control-button">
+                {/* <button onClick={handlePlayPause} className="control-button">
                     {isPlaying ? '⏸️' : '▶️'}
-                </button>
+                </button> */}
                 <button onClick={handleMuteToggle} className="control-button">
                     {isMuted ? '🔇' : '🔊'}
                 </button>
