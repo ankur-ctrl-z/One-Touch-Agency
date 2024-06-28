@@ -127,7 +127,7 @@ function OurServices2() {
   ];
 
   return (
-    <div className="bg-gray-900 w-full min-h-screen">
+    <div className="bg-[#1b1918]  w-full min-h-screen">
       {navBarRendered && (
         <div className="pt-28 ">
           <h1
@@ -146,11 +146,11 @@ function OurServices2() {
             className="text-5xl text-white flex justify-center text-center mt-5"
             style={{ fontFamily: "Chivo, sans-serif" }}
           >
-            <span className="text-[#fcb900] px-2">for Your Brand</span>
+            <span className="text-yellow-300 px-2">for Your Brand</span>
           </h1>
 
           <div
-            className={`bg-gray-900 w-full flex-wrap justify-center gap-4 sm:gap-4 grid ${
+            className={`bg-[#1b1918]  w-full flex-wrap justify-center gap-4 sm:gap-4 grid ${
               viewMore ? "lg:grid-cols-4" : "lg:grid-cols-3 "
             } grid-cols-1 md:grid-cols-2`}
           >
@@ -159,7 +159,7 @@ function OurServices2() {
               .map((service, index) => (
                 <div
                   key={index}
-                  className="items-center md:ml-5 md:mr-5 md:h-[18rem] border transition-transform duration-700 hover:scale-105 border-yellow-300 rounded-xl overflow-hidden mx-2 my-4"
+                  className="items-center md:ml-5 md:mr-5 md:h-[18rem] border transition-transform duration-700 border-yellow-300 rounded-xl overflow-hidden mx-2 my-4"
                   onClick={() => handleServiceClick(service.path)}
                 >
                   <img

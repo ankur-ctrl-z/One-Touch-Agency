@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 
-const ContactForm = () => {
+const ContactForm2 = () => {
   const [formData, setFormData] = useState({
     email: "",
     services: "",
@@ -40,7 +40,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className="text-gray-600 body-font relative bg-[#1b1918]  -mt-12"
+      className="text-gray-600 body-font relative bg-[#1b1918] "
       style={{ fontFamily: "Adamina, serif" }}
     >
       {/* horizontal line */}
@@ -49,17 +49,17 @@ const ContactForm = () => {
       </div>
 
       <h1
-        className="text-5xl mt-12 font-medium flex justify-center text-white"
+        className="text-5xl mt-[10rem] font-medium flex justify-center text-white"
         style={{ fontFamily: "Chivo, sans-serif" }}
       >
         Contact Us
       </h1>
       <div className="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-          <iframe 
+          <iframe
             width="100%"
             height="100%"
-            className="absolute inset-0 bg-gray-400"
+            className="absolute inset-0"
             frameBorder="0"
             title="map"
             marginHeight="0"
@@ -94,14 +94,11 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-
-        {/* contact form */}
         <div className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 rounded-lg">
-          <h1 className="text-black text-2xl mb-2 font-bold title-font pl-5 mt-5 md:-mt-3 ml-5">
+          <h1 className="text-gray-900 text-2xl mb-2 font-bold title-font pl-5 mt-5 md:-mt-3 ml-5">
             GET IN TOUCH
           </h1>
-
-            <form
+          <form
               className="flex flex-col justify-center items-center space-y-4 mt-5 "
               onSubmit={handleSubmit}
             >
@@ -146,9 +143,6 @@ const ContactForm = () => {
                   className='bg-black button-submit text-white text-xl flex justify-center py-3 px-8 mt-8 mb-10 border-[3px] border-white rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625] focus:outline-none'>Submit</button>
                 </div>
             </form>
-
-
-          
           {/* Highlighted Line */}
           <div style={{ minHeight: "1.5rem" }}>
             {error && <p className="text-red-500 text-center mt-2">{error}</p>}
@@ -160,7 +154,7 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactForm2;
 
 
 

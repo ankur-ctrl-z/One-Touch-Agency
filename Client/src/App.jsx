@@ -8,7 +8,7 @@ import Footer from "./components/Homepage/Footer";
 import OurPortfolio2 from "./Pages/OurPortfolioSecondary/OurPortfolio2";
 import HomePage from "./components/Homepage/Homepage";
 import OurServices2 from "./Pages/OurServicesSecondary/OurServices2";
-import ContactForm from "./components/Homepage/ContactForm";
+import ContactForm2 from "./Pages/ContactForm2";
 import AIVRTechnology from "./components/All-Services/AIVRTechnology";
 import AppreciationCeremony from "./components/All-Services/AppreciationCeremony";
 import AwardCeremony from "./components/All-Services/AwardCeremony";
@@ -57,7 +57,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/services2" element={<OurServices2 />} />
         <Route path="/portfolio2" element={<OurPortfolio2 />} />
-        <Route path="/contactus" element={<ContactForm />} />
+        <Route path="/contactus" element={<ContactForm2 />} />
 
         {/* sub services */}
         <Route path="/services/ai-vr-technology" element={<AIVRTechnology />} />

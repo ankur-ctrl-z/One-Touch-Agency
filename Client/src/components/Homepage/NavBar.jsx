@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import logo1 from "../../assets/onetouch_onwhite_svg.svg";
+import { useState } from "react";
 import logo2 from "../../assets/onetouch_onblack_svg.svg";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
@@ -8,62 +6,36 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
 
   const navHandler = () => {
     setNav(!nav);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-gray-950 bg-opacity-95 shadow-lg text-white"
-          : "bg-white bg-opacity-10 backdrop-blur-lg text-black rounded-xl"
-      }`}
+      className={
+        "fixed w-full h-[5.6rem] top-0 z-50 transition-all duration-300 bg-[#1b1918]  bg-opacity-95  text-white shadow-2xl  "
+      }
     >
       <div className="sm:flex flex-wrap">
-        <div className="flex -mt-5">
+       <Link to={'/'}>
+       <div className="flex -mt-3">
           <img
-            src={scrolled ? logo2 : logo1}
+            src={logo2}
             alt="logo"
-            className="w-28 h-28 ml-2 rounded-lg transition-all duration-300"
+            className="w-32 h-28 sm:ml-10 ml-2 rounded-lg transition-all duration-300"
           />
-        </div>
+        </div></Link>
 
-        <nav className="hidden md:block sm:mt-7 lg:mr-10 sm:ml-auto sm:mr-auto items-center text-xl md:text-2xl justify-center">
-          <a
-            href="/"
-            className={`nav-link mx-2 lg:mx-4 ${
-              scrolled ? "text-white" : "text-white"
-            }`}
-            style={{ fontFamily: "Adamina, serif" }}
-          >
+        <nav className="hidden md:block sm:mt-7 lg:mr-[3rem] xl:mr-[4rem] 2xl:mr-[4rem] sm:ml-auto sm:mr-auto md:mr-6 items-center text-xl md:text-2xl justify-center">
+          <Link to={'/'}
+          className=" mx-2 hover:text-[26px] lg:mx-4 text-white hover:text-gray-300 hover:shadow-xl transition-all duration-300"
+          style={{ fontFamily: "Adamina, serif" }}>
             Home
-          </a>
-          
-         
+            </Link>
 
           <Link
-            className={`nav-link mx-2 lg:mx-4 ${
-              scrolled ? "text-white" : "text-white"
-            }`}
+             className=" mx-2 hover:text-[26px] lg:mx-4 text-white hover:text-gray-300 hover:shadow-xl transition-all duration-300"
             style={{ fontFamily: "Adamina, serif" }}
             to={"/services2"}
           >
@@ -71,72 +43,26 @@ const NavBar = () => {
           </Link>
 
           <Link
-            className={`nav-link mx-2 lg:mx-4 ${
-              scrolled ? "text-white" : "text-white"
-            }`}
+            className=" mx-2 hover:text-[26px]  lg:mx-4 text-white hover:text-gray-300 hover:shadow-xl transition-all duration-300"
             style={{ fontFamily: "Adamina, serif" }}
             to={"/portfolio2"}
           >
             Portfolio
           </Link>
-          <Link to={'/contactus'}
-          className={`nav-link mx-2 lg:mx-4 ${
-              scrolled ? "text-white" : "text-white"
-            }`}
+
+          <Link
+            to={"/contactus"}
+            className=" mx-2 hover:text-[26px]  lg:mx-4 text-white hover:text-gray-300 hover:shadow-xl transition-all duration-300"
             style={{ fontFamily: "Adamina, serif" }}
           >
             Contact Us
           </Link>
-
         </nav>
 
-        <div className="hidden md:flex gap-1 sm:mt-7 sm:ml-auto lg:mr-10 sm:mr-auto text-white ">
-          <a
-            href="https://www.instagram.com/onetouchagency_/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`social-link mx-2 ${
-              scrolled ? "text-white" : "text-yellow-300"
-            }`}
-          >
-            <FaInstagram className="text-3xl transition-colors duration-300 hover:text-pink-800 " />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/one-touch-agency1/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`social-link mx-2 ${
-              scrolled ? "text-white" : "text-yellow-300"
-            }`}
-          >
-            <FaLinkedin className="text-3xl transition-colors duration-300 hover:text-blue-600 " />
-          </a>
-          <a
-            href="https://www.facebook.com/p/Onetouch-agency-100076203769169/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`social-link mx-2 ${
-              scrolled ? "text-white" : "text-yellow-300"
-            }`}
-          >
-            <FaFacebook className="text-3xl transition-colors duration-300 hover:text-blue-500 " />
-          </a>
-          <a
-            href="https://x.com/onetouchagency3"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`social-link mx-2 ${
-              scrolled ? "text-white" : "text-yellow-300"
-            }`}
-          >
-            <FaTwitter className="text-3xl transition-colors duration-300 hover:text-blue-600 " />
-          </a>
-        </div>
       </div>
 
-
       {/* for small devices  */}
-      <div className="py-2 px-2 sm:hidden">
+      <div className=" px-2 bg-[#1b1918] sm:hidden">
         <div
           onClick={navHandler}
           className="flex justify-end mr-5 -mt-[4.4rem] text-white font-bold text-4xl "
@@ -146,7 +72,7 @@ const NavBar = () => {
               <RxCross2 />
             </div>
           ) : (
-            <div>
+            <div className="font-bold">
               <IoMenu />
             </div>
           )}
@@ -154,97 +80,44 @@ const NavBar = () => {
 
         <div className="mt-2">
           {nav && (
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col ">
               {/* nav bar */}
-              <nav className="flex items-center justify-center sm:mt-10 lg:mr-10 sm:ml-auto sm:mr-auto text-lg md:text-2xl">
+              <nav className="flex flex-col gap-1 text-[1.3rem] items-center justify-center sm:mt-10 lg:mr-10 sm:ml-auto sm:mr-auto md:text-2xl">
                 <a
                   href="/"
-                  className={`nav-link mx-2 lg:mx-4 ${
-                    scrolled ? "text-white" : "text-white"
-                  }`}
+                  className="nav-link mx-2 lg:mx-4 text-white hover:text-gray-300 hover:shadow-xl transition duration-300 ease-in-out"
                   style={{ fontFamily: "Adamina, serif" }}
                 >
                   Home
                 </a>
-                <a
-                  href="/"
-                  className={`nav-link mx-2 lg:mx-4 ${
-                    scrolled ? "text-white" : "text-white"
-                  }`}
-                  style={{ fontFamily: "Adamina, serif" }}
-                >
-                  About Us
-                </a>
+
                 <Link
-                  className={`nav-link mx-2 lg:mx-4 ${
-                    scrolled ? "text-white" : "text-white"
-                  }`}
+                  className="nav-link mx-2 lg:mx-4 text-white hover:text-gray-300 hover:shadow-xl transition duration-300 ease-in-out"
                   style={{ fontFamily: "Adamina, serif" }}
-                  to={"/our-services-2"}
+                  to={"/services2"}
                 >
                   Services
                 </Link>
                 <Link
-                  className={`nav-link mx-2 lg:mx-4 ${
-                    scrolled ? "text-white" : "text-white"
-                  }`}
+                  className="nav-link mx-2 lg:mx-4 text-white hover:text-gray-300 hover:shadow-xl transition duration-300 ease-in-out"
                   style={{ fontFamily: "Adamina, serif" }}
-                  to={"/our-portfolio-2"}
+                  to={"/portfolio2"}
                 >
                   Portfolio
                 </Link>
-              </nav>
-              
-              {/*social icons */}
 
-              <div className="flex items-center justify-center gap-1 sm:mt-10 sm:ml-auto lg:mr-10 sm:mr-auto text-white ">
-                <a
-                  href="https://www.instagram.com/onetouchagency_/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`social-link mx-2 ${
-                    scrolled ? "text-white" : "text-yellow-300"
-                  }`}
+                <Link
+                  to={"/contactus"}
+                  className="nav-link mx-2 lg:mx-4 text-white hover:text-gray-300 hover:shadow-xl transition duration-300 ease-in-out"
+                  style={{ fontFamily: "Adamina, serif" }}
                 >
-                  <FaInstagram className="text-3xl transition-colors duration-300 hover:text-pink-800 " />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/one-touch-agency1/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`social-link mx-2 ${
-                    scrolled ? "text-white" : "text-yellow-300"
-                  }`}
-                >
-                  <FaLinkedin className="text-3xl transition-colors duration-300 hover:text-blue-600 " />
-                </a>
-                <a
-                  href="https://www.facebook.com/p/Onetouch-agency-100076203769169/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`social-link mx-2 ${
-                    scrolled ? "text-white" : "text-yellow-300"
-                  }`}
-                >
-                  <FaFacebook className="text-3xl transition-colors duration-300 hover:text-blue-500 " />
-                </a>
-                <a
-                  href="https://x.com/onetouchagency3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`social-link mx-2 ${
-                    scrolled ? "text-white" : "text-yellow-300"
-                  }`}
-                >
-                  <FaTwitter className="text-3xl transition-colors duration-300 hover:text-blue-600 " />
-                </a>
-              </div>
+                  Contact Us
+                </Link>
+              </nav>
             </div>
           )}
         </div>
       </div>
-
-
     </header>
   );
 };

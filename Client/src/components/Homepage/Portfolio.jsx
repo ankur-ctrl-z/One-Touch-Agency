@@ -22,7 +22,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="bg-gray-900">
+    <div className="bg-[#1b1918]">
       <div>
         <div className="flex flex-col items-center justify-center">
           <h1
@@ -99,9 +99,9 @@ const Portfolio = () => {
       <div className="flex justify-center mt-4 md:mt-[3.4rem]">
         <div
           className={`
-            w-full ml-2 mr-2 sm:w-[22rem] sm:ml-[20.5rem] md:-mt-[15rem] md:h-[11.5rem] lg:w-[45%] lg:-mt-[22.5rem] lg:ml-[29.5rem] lg:h-[19rem]
-             border border-yellow-500 rounded-md overflow-hidden
-        transition-transform duration-500 ${
+            w-full ml-2 mr-2 sm:w-[22rem] sm:ml-[20.5rem] md:-mt-[15rem] md:h-[11.5rem] lg:w-[29rem] lg:-mt-[16rem] lg:ml-[21rem] lg:h-[12.5rem] xl:w-[40.5rem] xl:h-[17.6rem] xl:-mt-[21rem] xl:ml-[28rem] 2xl:w-[43.5rem] 2xl:ml-[30rem] 2xl:h-[18.5rem] 2xl:-mt-[22rem]
+            border border-yellow-500 rounded-md overflow-hidden
+            transition-transform duration-500 ${
           isHovered ? "hover:-translate-y-2 hover:shadow-lg" : ""
         }`}
           onMouseEnter={handleMouseEnter}
@@ -124,6 +124,10 @@ const Portfolio = () => {
         >
           Check Out More
         </button>
+      </div>
+
+      <div className="w-full -ml-5 md:-ml-6">
+        <hr className="ml-12" style={{ border: "0.5px solid yellow" }} />
       </div>
     </div>
   );

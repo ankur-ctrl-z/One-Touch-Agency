@@ -11,7 +11,7 @@ const About = () => {
   };
 
   return (
-    <div className="w-full text-gray-600 body-font overflow-hidden bg-gray-900 ">
+    <div className="w-full text-gray-600 body-font overflow-hidden bg-[#1b1918] ">
       
      {/* horizontal line */}
      <div className="w-full -ml-5 md:-ml-6">
@@ -54,7 +54,7 @@ const About = () => {
             </h1>
           </div>
 
-          <div className="h-[26rem] w-[14rem] ml-3 md:ml-3 mt-8 px-1 lg:-ml-2 lg:w-[14rem] lg:h-[29rem] relative rounded-lg mb-6 lg:mb-0 lg:pl-6 pt-12">
+          <div className="h-[26rem] w-[14rem] md:ml-3 mt-8 lg:-ml-2 md:h-[29rem] lg:w-[14.3rem] xl:w-[15rem] lg:h-[29rem] relative rounded-lg mb-6 lg:mb-0 lg:pl-6 pt-12">
             <h1
               className="text-white text-center text-2xl mb-2 "
               style={{
@@ -139,7 +139,7 @@ const About = () => {
         </div>
       </div>
       {/* horizontal line */}
-      <div className="w-full -ml-5 -mt-14 md:-ml-6 lg:mt-10">
+      <div className="w-full -ml-5 -mt-14 md:-ml-6 xl:mt-10">
         <hr className="ml-12" style={{ border: "0.5px solid yellow" }} />
       </div>
     </div>

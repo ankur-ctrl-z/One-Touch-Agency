@@ -5,21 +5,21 @@ import image4 from '../../assets/Clients images/vecmocon.png';
 
 function Clients() {
   return (
-    <div className="bg-gray-900 w-full ">
+    <div className="bg-[#1b1918]  w-full ">
   <h1 className="sm:text-5xl text-2xl flex justify-center pt-10 font-medium title-font mb-2 text-white" style={{ fontFamily: 'Chivo, sans-serif' }}>
     Our Valuable Clients
   </h1>
   <div className="flex flex-wrap justify-center gap-4 pt-12">
-    <div className="h-[10rem] w-[14rem] md:h-[14rem] md:w-[18rem] rounded-lg border border-yellow-500 flex items-center justify-center">
+    <div className="h-[10rem] w-[14rem] md:h-[10rem] md:w-[18rem] rounded-lg border border-yellow-500 flex items-center justify-center">
       <img src={image1} className="w-full h-full object-fill rounded-lg" alt="Arihant" />
     </div>
-    <div className="h-[10rem] w-[14rem] md:h-[14rem] md:w-[18rem] rounded-lg border-2 border-yellow-500 flex items-center justify-center">
+    <div className="h-[10rem] w-[14rem] md:h-[10rem] md:w-[18rem] rounded-lg border-2 border-yellow-500 flex items-center justify-center">
       <img src={image2} className="w-full h-full object-fill rounded-lg" alt="Bhanderi Lab Grown Diamonds" />
     </div>
-    <div className="h-[10rem] w-[14rem] md:h-[14rem] md:w-[18rem] rounded-lg border border-yellow-500 flex items-center justify-center">
+    <div className="h-[10rem] w-[14rem] md:h-[10rem] md:w-[18rem] rounded-lg border border-yellow-500 flex items-center justify-center">
       <img src={image3} className="w-full h-full object-fill rounded-lg" alt="KEI Wires and Cables" />
     </div>
-    <div className="h-[10rem] w-[14rem] md:h-[14rem] md:w-[18rem] rounded-lg border border-yellow-500 flex items-center justify-center">
+    <div className="h-[10rem] w-[14rem] md:h-[10rem] md:w-[18rem] rounded-lg border border-yellow-500 flex items-center justify-center">
       <img src={image4} className="w-full h-full object-fill rounded-lg" alt="Tata Chemicals Limited" />
     </div>
   </div>

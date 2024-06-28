@@ -15,33 +15,20 @@ const Video = () => {
         }
     };
 
-    const handlePlayPause = () => {
-        if (videoRef.current) {
-            if (videoRef.current.paused) {
-                videoRef.current.play();
-                setIsPlaying(true);
-            } else {
-                videoRef.current.pause();
-                setIsPlaying(false);
-            }
-        }
-    };
 
     return (
-        <div className="w-full h-full md:py-[6rem] relative overflow-hidden bg-gray-900">
+        <div className="w-full h-full md:py-[6rem] relative overflow-hidden bg-[#1b1918] ">
             <video
                 ref={videoRef}
                 src={backgroundVideo}
                 loop
+                autoPlay
                 muted={isMuted}
                 className='w-45 h-45 pt-[6.7rem] sm:pt-0'
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
             />
-            <div className="controls-overlay ">
-                {/* <button onClick={handlePlayPause} className="control-button">
-                    {isPlaying ? '⏸️' : '▶️'}
-                </button> */}
+            <div className="controls-overlay sm:mb-[1rem]">
                 <button onClick={handleMuteToggle} className="control-button">
                     {isMuted ? '🔇' : '🔊'}
                 </button>
