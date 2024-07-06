@@ -5,11 +5,11 @@ import image4 from '../../assets/Clients images/vecmocon.png';
 
 function Clients() {
   return (
-    <div className="bg-[#1b1918]  w-full ">
-  <h1 className="sm:text-5xl text-2xl flex justify-center pt-10 font-medium title-font mb-2 text-white" style={{ fontFamily: 'Chivo, sans-serif' }}>
+    <div className="bg-gray-900  w-full ">
+  <h1 className="sm:text-5xl text-2xl flex mb-5 sm:mb-10 justify-center pt-10 font-medium title-font  text-white" style={{ fontFamily: 'Chivo, sans-serif' }}>
     Our Valuable Clients
   </h1>
-  <div className="flex flex-wrap justify-center gap-4 pt-12">
+  <div className="flex flex-wrap justify-center gap-4 pt-12 mb-5 sm:mb-10">
     <div className="h-[10rem] w-[14rem] md:h-[10rem] md:w-[18rem] rounded-lg border border-yellow-500 flex items-center justify-center">
       <img src={image1} className="w-full h-full object-fill rounded-lg" alt="Arihant" />
     </div>

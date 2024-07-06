@@ -23,7 +23,7 @@ const Services = () => {
 
   return (
  
-    <div className="text-gray-400 body-font mt-2 bg-[#1b1918] ">
+    <div className="text-gray-400 body-font -mt-[4.9rem] bg-gray-900 ">
       <div className="container px-5 py-9 mx-auto -mt-12">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
           <h1 className="sm:text-5xl text-2xl mt-10 font-medium title-font mb-2 text-white" style={{ fontFamily: 'Chivo, sans-serif' }}>
@@ -67,7 +67,7 @@ const Services = () => {
             >
             
             <div onClick={() => handleServiceClick(service.path)}
-                className={`border w-[16.5rem] ml-[0.6rem] md:w-[21.1rem] lg:w-[29rem] xl:w-[24rem] 2xl:w-[29.2rem]  border-yellow-500  border-opacity-75 p-6 rounded-lg relative overflow-hidden ${
+                className={`border w-[16.5rem] ml-[0.6rem] md:w-[21.1rem] hover:scale-105 transition-all duration-300 lg:w-[29rem] xl:w-[24rem] 2xl:w-[29.2rem]  border-yellow-500  border-opacity-75 p-6 rounded-lg relative overflow-hidden ${
                   clickedIndex === index ? 'h-64' : 'h-64'
                 }`}
               >

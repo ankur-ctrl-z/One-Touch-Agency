@@ -6,9 +6,9 @@ import { PiArrowCircleRightBold } from "react-icons/pi";
 
 const CorporateEvent = () => {
   return (
-    <div className="text-white mx-auto bg-[#1b1918] px-4 sm:px-6 lg:px-8 mt-24">
+    <div className="text-white mx-auto bg-gray-900 px-4 sm:px-6 lg:px-8 ">
       <div className="flex flex-col">
-        <div className="flex justify-center mt-2 items-center">
+        <div className="flex justify-center items-center mt-[5rem]">
           <img
             className="w-full sm:h-[25rem] sm:w-[40rem] rounded-lg mr-0 md:mr-5 md:mb-0 mt-5 md:mt-10"
             src={carporate2}

@@ -8,7 +8,7 @@ import clientImage4 from '../../assets/Clients images/vecmocon.png';
 
 const feedbacks = [
   {
-    text: "  We had an exceptional experience with the team. The event was flawlessly executed and our guests were highly impressed.",
+    text: " One-Touch Agency did an amazing job with our stall. They understood our vision and delivered exactly what we needed on time. Highly recommended!",
     name: "BHOOMI",
     image: clientImage1
   },
@@ -63,7 +63,7 @@ function Feedback() {
   };
 
   return (
-    <div className="bg-[#1b1918] min-h-screen md:-mt-[2vh] flex flex-col items-center justify-center relative">
+    <div className="bg-gray-900 min-h-screen md:-mt-[2vh] flex flex-col items-center justify-center relative">
       <div className="text-2xl md:text-4xl lg:text-5xl text-center font-medium text-white mb-32 -mt-20 sm:-mt-20">
         <h1 style={{ fontFamily: 'Chivo, sans-serif' }}>What Our Client Says</h1>
       </div>

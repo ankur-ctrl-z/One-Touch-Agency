@@ -22,7 +22,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="bg-[#1b1918]">
+    <div className="bg-gray-900">
       <div>
         <div className="flex flex-col items-center justify-center">
           <h1

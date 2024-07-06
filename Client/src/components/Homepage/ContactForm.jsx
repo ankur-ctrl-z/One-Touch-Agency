@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
-    services: "",
     message: "",
   });
 
@@ -21,13 +21,12 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await axios.post("https://www.api.onetouchagency.com/save-email", formData);
+      const response = await axios.post("http://localhost:3000/save-email", formData); // Update the URL here
       if (response.status === 200) {
         setSuccess("Form submitted successfully!");
         setError("");
-        setFormData({ email: "", services: "", message: "" });
+        setFormData({ name: "", email: "", message: "" });
       } else {
         setError("Error submitting form. Please try again.");
         setSuccess("");
@@ -38,20 +37,25 @@ const ContactForm = () => {
     }
   };
 
+  useEffect(() => {
+    if (success || error) {
+      const timer = setTimeout(() => {
+        setSuccess("");
+        setError("");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [success, error]);
+
   return (
-    <div
-      className="text-gray-600 body-font relative bg-[#1b1918]  -mt-12"
-      style={{ fontFamily: "Adamina, serif" }}
-    >
-      {/* horizontal line */}
+    <div className="text-gray-600 body-font relative bg-gray-900 -mt-12" style={{ fontFamily: "Adamina, serif" }}>
+      {/* Horizontal Line */}
       <div className="w-full -ml-5 md:-ml-6">
         <hr className="ml-12" style={{ border: "0.5px solid yellow" }} />
       </div>
 
-      <h1
-        className="text-5xl mt-12 font-medium flex justify-center text-white"
-        style={{ fontFamily: "Chivo, sans-serif" }}
-      >
+      <h1 className="text-5xl mt-12 font-medium flex justify-center text-white" style={{ fontFamily: "Chivo, sans-serif" }}>
         Contact Us
       </h1>
       <div className="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -95,65 +99,62 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* contact form */}
+        {/* Contact Form */}
         <div className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 rounded-lg">
-          <h1 className="text-black text-2xl mb-2 font-bold title-font pl-5 mt-5 md:-mt-3 ml-5">
+          <h1 className="text-black text-2xl font-bold title-font pl-5 mt-5 md:-mt-3 ml-5">
             GET IN TOUCH
           </h1>
 
-            <form
-              className="flex flex-col justify-center items-center space-y-4 mt-5 "
-              onSubmit={handleSubmit}
-            >
-              <div className="flex justify-center items-center">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem]  p-4 rounded-3xl hover:border-red-600 border-2 border-black card-color focus:outline-none"
-                  required
-                />
-              </div>
-              <div className="flex justify-center">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem]  p-4 rounded-3xl hover:border-red-600 border-2 border-black card-color focus:outline-none"
-                  required
-                />
-              </div>
-              <div className="flex justify-center">
-                <textarea
-                  name="message"
-                  placeholder="Message..."
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem] h-30 p-4 rounded-[1.8rem] hover:border-red-600 border-2 border-black card-color focus:outline-none"
-                  required
-                ></textarea>
-              </div>
-              
-              <div className="flex justify-center">
-                  <button
-                    smooth={true} 
-                    type="submit"
-                    duration={500} style={{ fontFamily: 'Chivo, sans-serif' }}
-                  className='bg-black button-submit text-white text-xl flex justify-center py-3 px-8 mt-8 mb-10 border-[3px] border-white rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625] focus:outline-none'>Submit</button>
-                </div>
-            </form>
-
-
+          <form className="flex flex-col justify-center items-center space-y-4" onSubmit={handleSubmit}>
+            
+            <div style={{ minHeight: "1.5rem" }}>
+              {error && <p className="text-red-500 text-center mt-2">{error}</p>}
+              {success && <p className="text-green-500 text-center mt-4">{success}</p>}
+            </div>
           
-          {/* Highlighted Line */}
-          <div style={{ minHeight: "1.5rem" }}>
-            {error && <p className="text-red-500 text-center mt-2">{error}</p>}
-            {success && <p className="text-green-500 text-center mt-4">{success}</p>}
-          </div>
+            <div className="flex justify-center items-center mt-10">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem] p-4 rounded-3xl hover:border-yellow-300 border-2 border-black card-color focus:outline-none"
+                required
+              />
+            </div>
+            <div className="flex justify-center">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem] p-4 rounded-3xl hover:border-yellow-300 border-2 border-black card-color focus:outline-none"
+                required
+              />
+            </div>
+            <div className="flex justify-center">
+              <textarea
+                name="message"
+                placeholder="Message..."
+                value={formData.message}
+                onChange={handleChange}
+                className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem] h-30 p-4 rounded-[1.8rem] hover:border-yellow-300 border-2 border-black card-color focus:outline-none"
+                required
+              ></textarea>
+            </div>
+              
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="bg-black button-submit text-white text-xl flex justify-center py-3 px-8 mt-8 mb-10 border-[3px] border-white rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625] focus:outline-none"
+                style={{ fontFamily: 'Chivo, sans-serif' }}
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -161,6 +162,8 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+
 
 
 

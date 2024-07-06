@@ -18,6 +18,13 @@ const connectDB = async function() {
 };
 
 const InputSchema = new mongoose.Schema({
+    // NAME
+    name:{
+        type: String,
+        required: true,
+        trim: true
+    },
+
     // EMAIL
     email: {
         type: String,
@@ -27,16 +34,11 @@ const InputSchema = new mongoose.Schema({
         trim: true
     },
 
-    // Services
-    services: {
-        type: String,
-        required: true
-    },
-
     // MESSAGE
     message: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
 
     // CREATED AT
@@ -46,21 +48,9 @@ const InputSchema = new mongoose.Schema({
     }
 });
 
-const SubscriptionEmailSchema = new mongoose.Schema({
-    email: {
-      type: String,
-      required: true,
-      unique: true 
-    },
-    subscribedAt: {
-      type: Date,
-      default: Date.now
-    }
-  });
-
 
 const InputModelOneTouch = mongoose.model('InputModelOneTouch', InputSchema);
-const SubscriptionEmailModel = mongoose.model('SubscriptionEmailModel', SubscriptionEmailSchema);
+
+module.exports = { connectDB, InputModelOneTouch };
 
 
-module.exports = { connectDB, InputModelOneTouch, SubscriptionEmailModel };

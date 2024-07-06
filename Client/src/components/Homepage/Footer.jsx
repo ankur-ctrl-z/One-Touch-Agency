@@ -5,23 +5,17 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div
-      className="w-full  bg-[#1b1918] "
-   
-    >
+    <div className="w-full  bg-gray-900 ">
       {/* horizontal line */}
-      <hr />
+      <div className="w-full -ml-5 md:-ml-6">
+        <hr className="ml-12" style={{ border: "0.5px solid yellow" }} />
+      </div>
 
-      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5 mb-5">
         {/* first div */}
-        {/* <div className="h-20 w-20 mt-10">
-          <img src={logo2} alt="" />
-        </div> */}
-
-        {/* second div */}
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center mt-5 mb-8">
           {/* heading */}
-          
+
           <h1
             className="text-white text-3xl mt-5 lg:text-2xl font-bold "
             style={{ fontFamily: "sans-serif,cursive " }}
@@ -29,8 +23,7 @@ const Footer = () => {
             One Touch Agency
           </h1>
           <p className="text-white font-medium text-center text-md mt-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit saepe
-            sed quo!
+          One-stop solution for all your events and exhibitions 
           </p>
 
           {/* social icons */}
@@ -66,14 +59,18 @@ const Footer = () => {
             <span className="font-bold" style={{ fontFamily: "sans-serif" }}>
               GSTIN/UIN :
             </span>{" "}
-            <span className="">27AJUPA4411G1ZD</span>
+            <span className="">27AJUPA4411G1ZD</span> <br />
+            <span className="font-bold" style={{ fontFamily: "sans-serif" }}>
+              Phone No. :
+            </span>{" "}
+            <span className="">+91 7021377482</span>
           </div>
         </div>
 
-        {/* third div */}
-        <div className="flex flex-col justify-center items-center -mt-1">
+        {/* second div */}
+        <div className="flex flex-col justify-center items-center mt-5 mb-8">
           {/* heading */}
-          <h2 className="text-white text-2xl font-bold" >COMPANY</h2>
+          <h2 className="text-white text-2xl font-bold">COMPANY</h2>
 
           {/* footer navlinks */}
           <nav className="flex text-lg flex-col  text-center md:text-start mb-8 text-white lg:text-xl mt-4 space-y-2">
@@ -92,7 +89,7 @@ const Footer = () => {
               to={"/portfolio2"}
               className="text-white hover:text-yellow-300"
             >
-              portfolio
+              Portfolio
             </Link>
 
             <Link
@@ -104,19 +101,23 @@ const Footer = () => {
           </nav>
         </div>
 
-        {/* fourth div */}
-        
-          {/* address1 */}
-        <div className="flex flex-col mb-8 justify-center items-center mt-10">
+        {/* thid div */}
+
+        {/* address1 */}
+        <div className="flex flex-col mb-8 justify-center items-center mt-8">
           <div className="flex items-center justify-center -mt-8">
             <div className="flex gap-2  text-white">
-              <div className="mt-2 md:mt-12 lg:mt-[1px] text-3xl"><ImLocation  /></div>
+              <div className="mt-2 md:mt-12 lg:mt-[1px] text-3xl">
+                <ImLocation />
+              </div>
               <p className="text-lg lg:text-xl">
-                <span className="text-3xl font-bold lg:text-3xl mb-1 sm:mt-10">
-                 Address
-                </span>
+              <h2 className="text-white text-2xl font-bold">ADDRESS</h2>
+                {/* <span className="text-2xl font-bold lg:text-2xl  sm:mt-10">
+                  ADDRESS
+                </span> */}
+               
                 <br />
-                MUMBAI
+                <strong>MUMBAI</strong>
                 <br />
                 147-E, 1st Floor,
                 <br />
@@ -132,42 +133,46 @@ const Footer = () => {
             </div>
           </div>
         </div>
-       
 
         {/* fifth div */}
         {/* address -2  */}
-          <div className="flex items-center justify-center -mt-6">
-            <div className="flex gap-2 text-white">
-              {/* <div className="mt-2 md:mt-12 lg:mt-[1px] text-3xl"><ImLocation  /></div> */}
-              <p className="text-lg lg:text-xl">
-                
-                <br />
-                BANGLURU
-                <br />
-                147-E, 1st Floor,
-                <br />
-                Panchratna
-                <br />
-                Building, Opera
-                <br />
-                House, Mumbai-
-                <br />
-                400004
-                <br />
-              </p>
-            </div>
+        <div className="flex items-center justify-center -mt-6">
+          <div className="flex gap-2 text-white">
+            {/* <div className="mt-2 md:mt-12 lg:mt-[1px] text-3xl"><ImLocation  /></div> */}
+            <p className="text-lg lg:text-xl">
+              <br />
+              <br />
+              <strong>BANGALORE</strong>
+              <br />
+              No. 49,
+              <br />
+              3rd Main Road,
+              <br />
+              5th Cross, Chamarajpet
+              <br />
+              Near Corporation Bank, 
+              <br />
+              Bangalore - 560018
+              <br />
+            </p>
           </div>
-      
+        </div>
       </div>
 
       {/* horizontal line  */}
-      <hr />
+      <div className="w-full -ml-5 md:-ml-6">
+        <hr className="ml-12" style={{ border: "0.5px solid yellow" }} />
+      </div>
 
-      <div className="text-gray-400 flex justify-center font-bold "
-       style={{ fontFamily: "Adamina, serif" }}>
-        <p className="mb-5 mt-2 font-serif text-xl"> @2024 One Touch Agency. </p>
-        <p className="mb-5 mt-2 font-serif text-xl"> Designed By - <a href="https://www.unarrow.com/">Unarrow Digital Solutions</a></p>
-       
+      <div
+        className="flex flex-col ml-2 mr-2 text-gray-400 sm:flex justify-center items-center font-bold "
+        style={{ fontFamily: "Adamina, serif" }}
+      >
+        <div className="mb-5 mt-2 font-serif text-lg">
+          {" "}
+          @2024 One Touch Agency. Designed By -{" "}
+          <a href="https://www.unarrow.com/">Unarrow Digital Solutions</a>{" "}
+        </div>
       </div>
     </div>
   );

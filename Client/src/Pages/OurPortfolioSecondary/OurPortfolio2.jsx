@@ -20,7 +20,7 @@ function OurPortfolio2() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#1b1918] pt-28">
+    <div className="w-full min-h-screen bg-gray-900 pt-28">
       {/* Container */}
       <div className="container mx-auto px-4 lg:px-24 mt-10">
         <div className="flex flex-col justify-center items-center ">

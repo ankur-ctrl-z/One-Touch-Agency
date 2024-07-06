@@ -11,7 +11,7 @@ const About = () => {
   };
 
   return (
-    <div className="w-full text-gray-600 body-font overflow-hidden bg-[#1b1918] ">
+    <div className="w-full text-gray-600 body-font overflow-hidden bg-gray-900 ">
       
      {/* horizontal line */}
      <div className="w-full -ml-5 md:-ml-6">

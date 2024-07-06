@@ -10,25 +10,25 @@ const Cards = () => {
   }, [isVisible]);
 
   return (
-    // bg-gray-900
+ 
     <div
-      className="text-gray-500 body-font bg-[#1b1918] relative overflow-hidden ]"
+      className="text-gray-500 body-font bg-gray-900 relative overflow-hidden ]"
       style={{ fontFamily: "Adamina, serif" }}
     >
       <div
-        className="absolute left-0 top-0 w-24 h-24 mt-[28rem] md:mt-[1rem] lg:mt-0 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-[#1b1918]  rounded-full"
+        className="absolute left-0 top-0 w-24 h-24 mt-[28rem] md:mt-[1rem] lg:mt-0 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gray-900  rounded-full"
         style={{ left: "10%", top: "38%", border: "4px solid yellow" }}
       ></div>  
       <div
-        className="absolute right-0 bottom-0 w-24 h-24 mb-[3.5rem]  md:w-48 md:h-48 lg:w-64 lg:h-64 bg-[#1b1918]  rounded-full"
+        className="absolute right-0 bottom-0 w-24 h-24 mb-[3.5rem]  md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gray-900  rounded-full"
         style={{ right: "7%", bottom: "22%", border: "4px solid yellow" }}
       ></div>
       <div
-        className="absolute left-0 top-0 w-6 hidden sm:block h-6 mt-[31rem] md:mt-10 lg:mt-0 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-[#1b1918]  rounded-full"
+        className="absolute left-0 top-0 w-6 hidden sm:block h-6 mt-[31rem] md:mt-10 lg:mt-0 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-gray-900  rounded-full"
         style={{ left: "8%", top: "30%", border: "4px solid yellow" }}
       ></div>
       <div
-        className="absolute right-0 bottom-0 hidden sm:block w-6 h-6  md:w-12 md:h-12 lg:w-16 lg:h-16 bg-[#1b1918]  rounded-full"
+        className="absolute right-0 bottom-0 hidden sm:block w-6 h-6  md:w-12 md:h-12 lg:w-16 lg:h-16 bg-gray-900  rounded-full"
         style={{ right: "4%", bottom: "17%", border: "4px solid yellow" }}
       ></div>
 
@@ -37,7 +37,7 @@ const Cards = () => {
           <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
             <VisibilitySensor partialVisibility>
               {({ isVisible }) => (
-                <div className="h-full bg-[#1b1918]  bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
+                <div className="h-full bg-gray-900  bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
                   <h1 className="title-font text-4xl font-medium text-white mb-3 card-text">
                     <CountUp
                       start={0}
@@ -60,7 +60,7 @@ const Cards = () => {
           <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
             <VisibilitySensor partialVisibility>
               {({ isVisible }) => (
-                <div className="h-full bg-[#1b1918] bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
+                <div className="h-full bg-gray-900 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
                   <h1 className="title-font text-4xl font-medium text-white mb-3 card-text">
                     <CountUp
                       start={0}
@@ -83,7 +83,7 @@ const Cards = () => {
           <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
             <VisibilitySensor partialVisibility>
               {({ isVisible }) => (
-                <div className="h-full bg-[#1b1918]  bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
+                <div className="h-full bg-gray-900 bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
                   <h1 className="title-font text-4xl font-medium text-white mb-3 card-text">
                     <CountUp
                       start={0}
@@ -106,7 +106,7 @@ const Cards = () => {
           <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
             <VisibilitySensor partialVisibility>
               {({ isVisible }) => (
-                <div className="h-full bg-[#1b1918]  bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
+                <div className="h-full bg-gray-900  bg-opacity-75 px-4 py-6 rounded-lg overflow-hidden text-center relative border border-yellow-500">
                   <h1 className="title-font text-4xl font-medium text-white mb-3 card-text">
                     <CountUp
                       start={0}
@@ -136,7 +136,7 @@ const Cards = () => {
         </h1>
       </div>
 
-      <div className="w-full bg-[#1b1918]  h-52"></div>
+      <div className="w-full bg-gray-900  h-52"></div>
 
       <style jsx>{`
         @keyframes move {

@@ -17,7 +17,7 @@ const Video = () => {
 
 
     return (
-        <div className="w-full h-full md:py-[6rem] relative overflow-hidden bg-[#1b1918] ">
+        <div className="w-full h-full md:py-[6rem] relative overflow-hidden bg-gray-900 ">
             <video
                 ref={videoRef}
                 src={backgroundVideo}
@@ -28,7 +28,7 @@ const Video = () => {
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
             />
-            <div className="controls-overlay sm:mb-[1rem]">
+            <div className="controls-overlay sm:mb-[1rem]  md:-ml-[20rem] md:mb-[4rem] lg:-ml-[28rem] xl:-ml-[40rem] 2xl:-ml-[44rem] ">
                 <button onClick={handleMuteToggle} className="control-button">
                     {isMuted ? '🔇' : '🔊'}
                 </button>
