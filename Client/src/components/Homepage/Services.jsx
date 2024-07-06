@@ -34,11 +34,11 @@ const Services = () => {
           <div className="xl:w-1/3 md:w-1/2 w-full p-4">
             <div className="h-56 flex flex-col justify-center items-center">
               <p className="lg:leading-snug text-opacity-80 text-4xl pt-4 md:mt-36 text-center font-bold text-yellow-300" style={{ fontFamily: 'Adamina, serif' }}>
-                <span className="text-white">Discover our standout</span> <br />
-                <span className="text-white">services{" "}</span>
-                <span className="text-yellow-300">for</span>
+                <span className="text-white">Discover Our Standout</span> <br />
+                <span className="text-white">Services{" "}</span>
+                <span className="text-yellow-300">For</span>
                 <br />
-                <span className="text-yellow-300">unforgettable events.</span>
+                <span className="text-yellow-300">Unforgettable Events.</span>
               </p>
 
               <Link to={'/services2'}>
