@@ -30,6 +30,8 @@ import TradeShow from "./components/All-Services/TradeShow";
 import VenueSourcing from "./components/All-Services/VenueSourcing";
 import VisitorManagement from "./components/All-Services/VisitorManagement";
 
+import Client2 from "./Pages/ClientPage2/Client2";
+
 function App() {
   useEffect(() => {
 
@@ -58,6 +60,7 @@ function App() {
         <Route path="/services2" element={<OurServices2 />} />
         <Route path="/portfolio2" element={<OurPortfolio2 />} />
         <Route path="/contactus" element={<ContactForm2 />} />
+        <Route path="/client2" element={<Client2 />} />
 
         {/* sub services */}
         <Route path="/services/ai-vr-technology" element={<AIVRTechnology />} />

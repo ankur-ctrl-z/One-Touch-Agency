@@ -65,7 +65,7 @@ const NavBar = () => {
       </div>
 
       {/* for small devices  */}
-      <div className="w-full bg-[#1b1918] sm:hidden">
+      <div className="w-full bg-gray-900 sm:hidden">
         <div
           onClick={navHandler}
           className="flex justify-end mr-5 -mt-[4.4rem] text-white font-bold text-4xl "
