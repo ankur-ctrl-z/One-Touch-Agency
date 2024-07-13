@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const { Schema } = mongoose;
 
 dotenv.config();
 
@@ -19,19 +20,23 @@ const connectDB = async function() {
 
 const InputSchema = new mongoose.Schema({
     // NAME
-    name:{
+    name: {
         type: String,
         required: true,
         trim: true
     },
 
-    // EMAIL
-    email: {
-        type: String,
+    // PHONE
+    phone: {
+        type: Number,
         required: true,
         unique: true,
-        lowercase: true,
-        trim: true
+        validate: {
+            validator: function(v) {
+                return /^\d{10}$/.test(v.toString());
+            },
+            message: props => `${props.value} is not a valid phone number!`
+        }
     },
 
     // MESSAGE
@@ -48,9 +53,9 @@ const InputSchema = new mongoose.Schema({
     }
 });
 
-
 const InputModelOneTouch = mongoose.model('InputModelOneTouch', InputSchema);
 
 module.exports = { connectDB, InputModelOneTouch };
+
 
 

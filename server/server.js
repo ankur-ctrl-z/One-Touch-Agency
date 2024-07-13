@@ -15,31 +15,35 @@ app.use(express.json());
 // Defining schema using Zod
 const InputSchema = z.object({
     name: z.string().nonempty('Name is required'),
-    email: z.string().email('Invalid email address'),
+    phone: z.string().regex(/^\d{10}$/, 'Phone number must be exactly 10 digits'),
     message: z.string().nonempty('Message is required')
 });
 
-// Middleware for duplicate email check
-async function checkDuplicateEmail(req, res, next) {
-    const { email } = req.body;
+// Middleware for duplicate phone number check
+async function checkDuplicatePhone(req, res, next) {
+    const { phone } = req.body;
     try {
-        const existingEmail = await InputModelOneTouch.findOne({ email });
-        if (existingEmail) {
-            return res.status(400).json({ error: 'Email already exists' });
+        const existingPhone = await InputModelOneTouch.findOne({ phone });
+        if (existingPhone) {
+            return res.status(400).json({ error: 'Phone number already exists' });
         }
         next();
     } catch (error) {
-        console.error('Error checking duplicate email:', error.message);
+        console.error('Error checking duplicate phone:', error.message);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 }
 
 connectDB();
 
-app.post('/save-email', checkDuplicateEmail, async (req, res) => {
+app.post('/save-phone', checkDuplicatePhone, async (req, res) => {
     try {
-        const validatedData = InputSchema.parse(req.body);
-        const formData = new InputModelOneTouch(validatedData);
+        const { name, phone, message } = req.body;
+        const formData = new InputModelOneTouch({
+            name,
+            phone: parseInt(phone),
+            message
+        });
         await formData.save();
         res.status(200).send('Form data saved successfully.');
     } catch (error) {
@@ -55,4 +59,7 @@ app.post('/save-email', checkDuplicateEmail, async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
 });
+
+
+
 

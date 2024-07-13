@@ -3,9 +3,8 @@ import axios from 'axios';
 
 const ContactForm2 = () => {
   const [formData, setFormData] = useState({
-    name:"",
-    email: "",
-    // services: "",
+    name: "",
+    phone: "",
     message: "",
   });
 
@@ -22,13 +21,17 @@ const ContactForm2 = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!/^\d{10}$/.test(formData.phone)) {
+      setError("Phone number must be exactly 10 digits.");
+      return;
+    }
 
     try {
-      const response = await axios.post("https://www.api.onetouchagency.com/save-email", formData);
+      const response = await axios.post("http://localhost:3000/save-phone", formData);
       if (response.status === 200) {
         setSuccess("Form submitted successfully!");
         setError("");
-        setFormData({ name:"", email: "",  message: "" });
+        setFormData({ name: "", phone: "", message: "" });
       } else {
         setError("Error submitting form. Please try again.");
         setSuccess("");
@@ -41,7 +44,7 @@ const ContactForm2 = () => {
 
   return (
     <div
-      className="text-gray-600 body-font relative bg-gray-900 "
+      className="text-gray-600 body-font relative bg-gray-900"
       style={{ fontFamily: "Adamina, serif" }}
     >
       {/* horizontal line */}
@@ -100,7 +103,7 @@ const ContactForm2 = () => {
             GET IN TOUCH
           </h1>
           <form
-            className="flex flex-col justify-center items-center space-y-4 mt-5 "
+            className="flex flex-col justify-center items-center space-y-4 mt-5"
             onSubmit={handleSubmit}
           >
             <div style={{ minHeight: "1.5rem" }}>
@@ -119,18 +122,18 @@ const ContactForm2 = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem]  p-4 rounded-3xl hover:border-yellow-300 border-2 border-black card-color focus:outline-none"
+                className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem] p-4 rounded-3xl hover:border-yellow-300 border-2 border-black card-color focus:outline-none"
                 required
               />
             </div>
             <div className="flex justify-center">
               <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                value={formData.phone}
                 onChange={handleChange}
-                className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem]  p-4 rounded-3xl hover:border-yellow-300 border-2 border-black card-color focus:outline-none"
+                className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem] p-4 rounded-3xl hover:border-yellow-300 border-2 border-black card-color focus:outline-none"
                 required
               />
             </div>
@@ -147,9 +150,7 @@ const ContactForm2 = () => {
 
             <div className="flex justify-center">
               <button
-                smooth={true}
                 type="submit"
-                duration={500}
                 style={{ fontFamily: "Chivo, sans-serif" }}
                 className="bg-black button-submit text-white text-xl flex justify-center py-3 px-8 mt-8 mb-10 border-[3px] border-white rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625] focus:outline-none"
               >
@@ -165,6 +166,8 @@ const ContactForm2 = () => {
 };
 
 export default ContactForm2;
+
+
 
 
 
