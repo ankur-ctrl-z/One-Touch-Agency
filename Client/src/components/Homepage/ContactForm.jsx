@@ -106,7 +106,7 @@ const ContactForm = () => {
               <input
                 type="tel" 
                 name="phone"
-                placeholder="Phone"
+                placeholder="Phone Number"
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-[16rem] md:w-[14rem] lg:w-[17rem] xl:w-[23rem] p-4 rounded-3xl hover:border-yellow-300 border-2 border-black card-color focus:outline-none"
