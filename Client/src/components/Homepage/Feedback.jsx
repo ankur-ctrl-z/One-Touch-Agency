@@ -71,11 +71,11 @@ function Feedback() {
         <button onClick={handlePrev} className="text-white focus:outline-none rounded mr-6">
           <RiArrowLeftSLine className="text-5xl md:text-7xl ml-1 hover:text-yellow-500 transition-colors duration-300" />
         </button>
-        <div className=" bg-gray-200 -mt-10 w-[60%] h-80 rounded-lg relative flex flex-col items-center justify-center p-6 transition-transform duration-500 ease-in-out transform">
+        <div className=" bg-gray-200 -mt-10 w-[66%] h-80 rounded-lg relative flex flex-col items-center justify-center p-6 transition-transform duration-500 ease-in-out transform">
           <img
             src={feedbacks[currentFeedback].image}
             alt="Client"
-            className="w-24 h-24 rounded-full border border-yellow-300 bg-black absolute top-0 transform -translate-y-1/2 transition-all duration-500"
+            className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-yellow-300 bg-black absolute top-0 transform -translate-y-1/2 transition-all duration-500"
             style={{ top: '0' }}
           />
           <div className="text-gray-900 text-3xl text-center flex items-center mt-10" style={{ fontFamily: 'Adamina, serif' }}>
