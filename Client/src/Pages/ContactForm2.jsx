@@ -70,7 +70,6 @@ const ContactForm2 = () => {
             marginWidth="0"
             scrolling="no"
             src="https://maps.google.com/maps?q=18.95541174712792,72.81646177585895&hl=en&z=14&output=embed"
-            style={{ filter: "grayscale(1) contrast(1.2) opacity(0.4)" }}
           ></iframe>
           <div className="bg-white -ml-7 relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
