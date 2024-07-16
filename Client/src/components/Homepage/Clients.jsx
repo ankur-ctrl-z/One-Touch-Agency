@@ -64,7 +64,7 @@ function Clients() {
             className="text-white text-xl flex justify-center py-3 px-6 mt-8 mb-10 border-[3px] border-white rounded-2xl shadow-[#F2F625] shadow-md hover:cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:border-[#F2F625] focus:outline-none"
             href="/client2"
           >
-            Veiw All
+            View All
           </a>
         </div>
       </div>
