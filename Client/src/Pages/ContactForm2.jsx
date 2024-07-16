@@ -27,7 +27,7 @@ const ContactForm2 = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/save-phone", formData);
+      const response = await axios.post("https://www.api.onetouchagency.com/save-phone", formData);
       if (response.status === 200) {
         setSuccess("Form submitted successfully!");
         setError("");
