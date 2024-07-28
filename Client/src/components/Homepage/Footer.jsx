@@ -104,16 +104,15 @@ const Footer = () => {
         {/* thid div */}
 
         {/* address1 */}
-        {/* <div className="flex flex-col mb-8 justify-center items-center mt-8"> */}
-          {/* <div className="flex items-center justify-center -mt-8"> */}
-            <div className="flex flex-col sm:mt-10  text-white">
-              <div className="flex ml-16 sm:ml-12 sm:flex-row ">
+    
+            <div className="flex flex-col justify-center items-center sm:mt-10  text-white">
+              <div className="flex sm:ml-12 sm:flex-row ">
                 <div className=" lg:mt-[1px] text-3xl">
                   <ImLocation />
                 </div>
                 <h2 className="text-white text-2xl font-bold">ADDRESS</h2>
               </div>
-              <p className="text-lg lg:text-xl sm:-mt-4 ml-20">
+              <p className="text-lg lg:text-xl sm:-mt-4 ml-5">
                 <br />
                 <strong>MUMBAI</strong>
                 <br />
@@ -129,8 +128,7 @@ const Footer = () => {
                 <br />
               </p>
             </div>
-          {/* </div> */}
-        {/* </div> */}
+       
 
         {/* fifth div */}
         {/* address -2  */}
