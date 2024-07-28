@@ -67,7 +67,7 @@ const Services = () => {
             >
             
             <div onClick={() => handleServiceClick(service.path)}
-                className={`border w-[16.5rem] ml-[0.6rem] md:w-[21.1rem] hover:scale-105 transition-all duration-300 lg:w-[29rem] xl:w-[24rem] 2xl:w-[29.2rem]  border-yellow-500  border-opacity-75 p-6 rounded-lg relative overflow-hidden ${
+                className={`border ml-[0.6rem] md:w-[21.1rem] hover:scale-105 transition-all duration-300 lg:w-[29rem] xl:w-[24rem] 2xl:w-[29.2rem]  border-yellow-500  border-opacity-75 p-6 rounded-lg relative overflow-hidden ${
                   clickedIndex === index ? 'h-64' : 'h-64'
                 }`}
               >
