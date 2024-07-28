@@ -19,32 +19,21 @@ const InputSchema = z.object({
     message: z.string().nonempty('Message is required')
 });
 
-// Middleware for duplicate phone number check
-async function checkDuplicatePhone(req, res, next) {
-    const { phone } = req.body;
-    try {
-        const existingPhone = await InputModelOneTouch.findOne({ phone });
-        if (existingPhone) {
-            return res.status(400).json({ error: 'Phone number already exists' });
-        }
-        next();
-    } catch (error) {
-        console.error('Error checking duplicate phone:', error.message);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-}
-
 connectDB();
 
-app.post('/save-phone', checkDuplicatePhone, async (req, res) => {
+app.post('/save-phone', async (req, res) => {
     try {
-        const { name, phone, message } = req.body;
-        const formData = new InputModelOneTouch({
-            name,
-            phone: parseInt(phone),
-            message
+        // Validate the request body against the schema
+        const formData = InputSchema.parse(req.body);
+
+        // If validation passes, save the data to the database
+        const inputModel = new InputModelOneTouch({
+            name: formData.name,
+            phone: parseInt(formData.phone),
+            message: formData.message
         });
-        await formData.save();
+        await inputModel.save();
+
         res.status(200).send('Form data saved successfully.');
     } catch (error) {
         if (error instanceof z.ZodError) {
@@ -55,6 +44,7 @@ app.post('/save-phone', checkDuplicatePhone, async (req, res) => {
         }
     }
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
