@@ -15,7 +15,7 @@ const NavBar = () => {
   return (
     <header
       className={
-        "fixed w-full h-[5.6rem] top-0 z-50 transition-all duration-300 bg-gray-900 bg-opacity-95  text-white shadow-2xl  "
+        "fixed w-full h-[5.6rem] top-0 z-50 transition-all duration-300 bg-gray-900 text-white shadow-2xl  "
       }
     >
       <div className="sm:flex flex-wrap mt-2">
