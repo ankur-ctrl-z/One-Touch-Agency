@@ -105,9 +105,9 @@ const Footer = () => {
 
         {/* address1 */}
     
-            <div className="flex flex-col justify-center items-center sm:mt-10  text-white">
-              <div className="flex sm:ml-12 sm:flex-row ">
-                <div className=" lg:mt-[1px] text-3xl">
+            <div className="flex flex-col justify-center items-center lg:-mt-4 text-white">
+              <div className="flex sm:flex-row ">
+                <div className=" lg:mt-[1px] sm:-ml-5 text-3xl">
                   <ImLocation />
                 </div>
                 <h2 className="text-white text-2xl font-bold">ADDRESS</h2>
@@ -130,9 +130,9 @@ const Footer = () => {
             </div>
        
 
-        {/* fifth div */}
+        {/* fourth div */}
         {/* address -2  */}
-        <div className="flex items-center justify-center gap-2 text-white">
+        <div className="flex items-center justify-center gap-2 -mt-5 text-white">
           <p className="ml-16 text-lg lg:text-xl">
             <br />
             <br />
