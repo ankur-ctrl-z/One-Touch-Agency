@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const { Schema } = mongoose;
-   
+    
 dotenv.config();
 
 const connectDB = async function() {
